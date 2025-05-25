@@ -65,39 +65,61 @@ main {
 
 /* Apresentação - centralizado */
 
-.presentation-text {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  white-space: normal !important;
-  writing-mode: horizontal-tb !important;
-  transform: none !important;
-  word-break: normal !important;
-  text-align: left;
-}
-
 .presentation-container {
-  flex-wrap: wrap; /* permite quebrar linha no mobile */
+  display: flex;
+  align-items: center;      /* centraliza verticalmente */
+  justify-content: center;  /* centraliza horizontalmente */
+  gap: 30px;
+  max-width: 900px;
+  width: 100%;
+  background: #f9f9f9;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  animation: fadeIn 0.8s ease forwards;
+  margin: 0 auto; /* centraliza o container na página */
 }
 
-/* Ajustes para telas pequenas */
+.presentation-container img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%; /* deixa a imagem redonda */
+  border: 3px solid #ccc;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.presentation-text h1 {
+  margin: 0 0 15px;
+  font-size: 2.2rem;
+  color: #222;
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+}
+
+.presentation-text p {
+  font-size: 1.1rem;
+  color: #444;
+  line-height: 1.5;
+  max-width: 500px;
+  font-family: 'Lato', sans-serif;
+}
+
+/* Layout responsivo para mobile */
 @media (max-width: 600px) {
   .presentation-container {
-    flex-direction: column;
+    flex-direction: column; /* imagem em cima, texto abaixo */
+    text-align: center;     /* centraliza texto */
+    gap: 20px;
     padding: 20px;
   }
 
-  .presentation-container img {
-    width: 150px;
-    height: 150px;
-    margin-bottom: 20px;
-  }
-
-  .presentation-text {
+  .presentation-text p,
+  .presentation-text h1 {
     max-width: 100%;
-    text-align: center;
   }
 }
+
 
 
 /* Filmes - grid layout */
