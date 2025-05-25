@@ -1,3 +1,6 @@
+/* Importar fontes do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Playfair+Display&display=swap');
+
 /* Reset simples */
 * {
   box-sizing: border-box;
@@ -6,9 +9,9 @@
 html, body {
   height: 100%;
   margin: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background: #fff;
   color: #222;
+  font-family: 'Lato', sans-serif; /* fonte principal do corpo */
 }
 
 header {
@@ -60,12 +63,7 @@ main {
 
 /* Geral para as abas */
 
-
-
-
 /* Apresentação - centralizado */
-
-
 
 .presentation-container {
   display: flex;
@@ -89,10 +87,13 @@ main {
   box-shadow: 0 3px 10px rgba(0,0,0,0.1);
 }
 
+/* Usar fonte serifada elegante para os títulos da apresentação */
 .presentation-text h1 {
   margin: 0 0 15px;
   font-size: 2.2rem;
   color: #222;
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
 }
 
 .presentation-text p {
@@ -100,6 +101,7 @@ main {
   color: #444;
   line-height: 1.5;
   max-width: 500px;
+  font-family: 'Lato', sans-serif;
 }
 
 /* Filmes - grid layout */
@@ -125,12 +127,15 @@ main {
   margin: 0 0 8px;
   font-size: 1.5rem;
   color: #007acc;
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
 }
 
 .movie-info p {
   margin: 0;
   font-size: 1rem;
   color: #555;
+  font-family: 'Lato', sans-serif;
 }
 
 /* Animação fadeIn */
@@ -143,10 +148,10 @@ main {
 /* Container da aba */
 .tab-content {
   display: none;
-  padding: 20px 40px; /* deixa espaço nas laterais para não ficar colado */
+  padding: 20px 40px;
   box-sizing: border-box;
   max-width: 1000px;
-  margin: 0 auto; /* centraliza o conteúdo na tela */
+  margin: 0 auto;
 }
 
 .tab-content.active {
@@ -159,6 +164,7 @@ h2 {
   color: #333;
   text-align: left;
   font-size: 2rem;
+  font-family: 'Playfair Display', serif;
 }
 
 /* Título do grupo de jogos */
@@ -168,6 +174,7 @@ h2 {
   color: #cc7a00;
   font-size: 1.3rem;
   text-align: left;
+  font-family: 'Playfair Display', serif;
 }
 
 /* Container dos jogos terminados */
@@ -178,7 +185,7 @@ h2 {
   padding-bottom: 12px;
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
-  padding-left: 4px; /* Pequeno padding para não ficar grudado na esquerda */
+  padding-left: 4px;
 }
 
 /* Itens do jogo */
@@ -228,5 +235,3 @@ h2 {
 .grid-terminados {
   scrollbar-width: none;
 }
-
-
