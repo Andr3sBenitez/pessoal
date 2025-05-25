@@ -1,0 +1,232 @@
+/* Reset simples */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #fff;
+  color: #222;
+}
+
+header {
+  background: #f7f7f7;
+  padding: 15px 0;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+nav ul.tabs {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul.tabs li a {
+  text-decoration: none;
+  color: #555;
+  font-weight: 600;
+  font-size: 1.1rem;
+  padding: 8px 15px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  user-select: none;
+}
+
+nav ul.tabs li a:hover {
+  background-color: #eee;
+  color: #000;
+}
+
+nav ul.tabs li a.active {
+  background-color: #007acc;
+  color: #fff;
+}
+
+/* Área principal */
+
+main {
+  padding: 30px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Geral para as abas */
+
+
+
+
+/* Apresentação - centralizado */
+
+
+
+.presentation-container {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  max-width: 900px;
+  width: 100%;
+  background: #f9f9f9;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  animation: fadeIn 0.8s ease forwards;
+}
+
+.presentation-container img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #ccc;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.presentation-text h1 {
+  margin: 0 0 15px;
+  font-size: 2.2rem;
+  color: #222;
+}
+
+.presentation-text p {
+  font-size: 1.1rem;
+  color: #444;
+  line-height: 1.5;
+  max-width: 500px;
+}
+
+/* Filmes - grid layout */
+
+.movies-grid {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  gap: 20px 30px;
+  align-items: center;
+}
+
+.movie-card {
+  display: contents;
+}
+
+.movie-card img {
+  width: 140px;
+  border-radius: 8px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+
+.movie-info h2 {
+  margin: 0 0 8px;
+  font-size: 1.5rem;
+  color: #007acc;
+}
+
+.movie-info p {
+  margin: 0;
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Animação fadeIn */
+
+@keyframes fadeIn {
+  from {opacity: 0; transform: translateY(10px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+/* Container da aba */
+.tab-content {
+  display: none;
+  padding: 20px 40px; /* deixa espaço nas laterais para não ficar colado */
+  box-sizing: border-box;
+  max-width: 1000px;
+  margin: 0 auto; /* centraliza o conteúdo na tela */
+}
+
+.tab-content.active {
+  display: block;
+}
+
+h2 {
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #333;
+  text-align: left;
+  font-size: 2rem;
+}
+
+/* Título do grupo de jogos */
+.jogos-terminados h3 {
+  margin-bottom: 16px;
+  font-weight: 600;
+  color: #cc7a00;
+  font-size: 1.3rem;
+  text-align: left;
+}
+
+/* Container dos jogos terminados */
+.grid-terminados {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  padding-bottom: 12px;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  padding-left: 4px; /* Pequeno padding para não ficar grudado na esquerda */
+}
+
+/* Itens do jogo */
+.jogo-terminado-item {
+  flex: 0 0 auto;
+  width: 110px;
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  cursor: default;
+  transition: transform 0.2s ease;
+  user-select: none;
+}
+
+.jogo-terminado-item:hover {
+  transform: scale(1.05);
+}
+
+.jogo-terminado-item img {
+  width: 110px;
+  height: 110px;
+  border-radius: 14px;
+  object-fit: cover;
+  margin-bottom: 8px;
+  box-shadow: 0 3px 8px rgba(204, 122, 0, 0.5);
+}
+
+.jogo-terminado-item p {
+  font-weight: 600;
+  font-size: 1rem;
+  color: #cc7a00;
+  margin: 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  max-width: 100%;
+}
+
+/* Esconder scrollbar (Chrome, Safari) */
+.grid-terminados::-webkit-scrollbar {
+  display: none;
+}
+
+/* Esconder scrollbar (Firefox) */
+.grid-terminados {
+  scrollbar-width: none;
+}
+
+
