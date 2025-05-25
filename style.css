@@ -197,18 +197,17 @@ main {
   display: block;
 }
 
-/* Container dos jogos terminados */
 .grid-terminados {
   display: flex;
   gap: 16px;
   overflow-x: auto;
   padding-bottom: 12px;
+  padding-left: 4px;
   scroll-snap-type: x mandatory;
+  scroll-padding-left: 12px; /* ajuda o snap no começo */
   -webkit-overflow-scrolling: touch;
-  padding-left: 4px; /* Pequeno padding para não ficar grudado na esquerda */
 }
 
-/* Itens do jogo */
 .jogo-terminado-item {
   flex: 0 0 auto;
   width: 110px;
@@ -220,10 +219,14 @@ main {
   cursor: default;
   transition: transform 0.2s ease;
   user-select: none;
+  outline: none;
 }
 
-.jogo-terminado-item:hover {
+.jogo-terminado-item:hover,
+.jogo-terminado-item:focus-visible {
   transform: scale(1.05);
+  outline: 2px solid #cc7a00;
+  outline-offset: 2px;
 }
 
 .jogo-terminado-item img {
@@ -246,17 +249,14 @@ main {
   max-width: 100%;
 }
 
-/* Esconder scrollbar (Chrome, Safari) */
 .grid-terminados::-webkit-scrollbar {
   display: none;
 }
 
-/* Esconder scrollbar (Firefox) */
 .grid-terminados {
   scrollbar-width: none;
 }
 
-/* Responsividade para dispositivos móveis */
 @media (max-width: 600px) {
   .grid-terminados {
     padding-left: 8px;
