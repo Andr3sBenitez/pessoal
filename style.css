@@ -156,6 +156,27 @@ main {
   font-family: 'Lato', sans-serif;
 }
 
+/* Ajuste para telas pequenas - mobile */
+@media (max-width: 600px) {
+  .movies-grid {
+    grid-template-columns: 1fr;
+    gap: 15px 0;
+  }
+
+  .movie-card img {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+    display: block;
+  }
+
+  .movie-info h2,
+  .movie-info p {
+    text-align: center;
+  }
+}
+
+
 /* Animação fadeIn */
 
 @keyframes fadeIn {
