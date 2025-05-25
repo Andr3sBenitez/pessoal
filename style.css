@@ -65,44 +65,40 @@ main {
 
 /* Apresentação - centralizado */
 
-.presentation-container {
+.presentation-text {
   display: flex;
-  align-items: center;
-  gap: 30px;
-  max-width: 900px;
-  width: 100%;
-  background: #f9f9f9;
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-  animation: fadeIn 0.8s ease forwards;
+  flex-direction: column;
+  justify-content: center;
+  white-space: normal !important;
+  writing-mode: horizontal-tb !important;
+  transform: none !important;
+  word-break: normal !important;
+  text-align: left;
 }
 
-.presentation-container img {
-  width: 200px;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 3px solid #ccc;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+.presentation-container {
+  flex-wrap: wrap; /* permite quebrar linha no mobile */
 }
 
-/* Usar fonte serifada elegante para os títulos da apresentação */
-.presentation-text h1 {
-  margin: 0 0 15px;
-  font-size: 2.2rem;
-  color: #222;
-  font-family: 'Playfair Display', serif;
-  font-weight: 700;
+/* Ajustes para telas pequenas */
+@media (max-width: 600px) {
+  .presentation-container {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .presentation-container img {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 20px;
+  }
+
+  .presentation-text {
+    max-width: 100%;
+    text-align: center;
+  }
 }
 
-.presentation-text p {
-  font-size: 1.1rem;
-  color: #444;
-  line-height: 1.5;
-  max-width: 500px;
-  font-family: 'Lato', sans-serif;
-}
 
 /* Filmes - grid layout */
 
