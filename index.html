@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Meu Site Elegante</title>
+  <title>Andres</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -14,22 +14,36 @@
         <li><a href="#" class="tab-link" data-tab="filmes">Filmes</a></li>
         <li><a href="#" class="tab-link" data-tab="jogos">Jogos</a></li>
         <li><a href="#" class="tab-link" data-tab="livros">Livros</a></li>
+         <li><a href="#" class="tab-link" data-tab="estudos">Estudos</a></li>
       </ul>
     </nav>
   </header>
 
-  <main>
-    <!-- Apresentação -->
-    <section id="apresentacao" class="tab-content">
-      <div class="presentation-container">
-        <img src="/img/perfil.jpg" alt="Foto de Apresentação" />
-        <div class="presentation-text">
-          <h1>Olá, eu sou Andres</h1>
-          <p>Sou apaixonado por cinema, jogos e livros. Este site é um espaço para compartilhar minhas paixões e interesses. Aqui você encontrará minhas recomendações, análises e muito mais. Seja bem-vindo!</p>
-          <p>Fique à vontade para explorar as abas e conhecer um pouco mais sobre o que me inspira.</p>
+<main>
+  <!-- Apresentação -->
+  <section id="apresentacao" class="tab-content">
+    <div class="presentation-container">
+      <img src="/img/perfil.jpg" alt="Foto de Apresentação" />
+      <div class="presentation-text">
+        <h1>Olá, eu sou Andres</h1>
+        <p>Sou apaixonado por cinema, jogos e livros. Este site é um espaço para compartilhar minhas paixões e interesses. Aqui você encontrará minhas recomendações, análises e muito mais. Seja bem-vindo!</p>
+        <p>Fique à vontade para explorar as abas e conhecer um pouco mais sobre o que me inspira.</p>
+
+        <!-- Badges dos gostos -->
+        <div class="badges-container">
+          <span class="badge">🐧 Pinguins</span>
+          <span class="badge">🦇 Batman</span>
+          <span class="badge">🎭 Shakespeare</span>
+          <span class="badge">🎬 Cinema</span>
+          <span class="badge">🎮 Jogos</span>
+          <span class="badge">📚 Literatura</span>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
+</main>
+
+
 
     <!-- Filmes -->
     <section id="filmes" class="tab-content">
@@ -54,7 +68,16 @@ O filme mostra que não precisa de muito pra viver bem. Não tem grandes revirav
 No fim, Dias Perfeitos não é sobre mudar o mundo, mas sobre encontrar beleza no mundo como ele é. Calmo, imperfeito e, ainda assim, cheio de sentido.</p>
           </div>
         </article>
-        <!-- Adicione mais filmes aqui -->
+        <article class="movie-card">
+          <img src="/img/filme3.jpg" alt="Filme 1" />
+          <div class="movie-info">
+            <h2>O Menino, A Toupeira, A Raposa E O Cavalo</h2>
+            <p>Cara, esse filme me pegou de um jeito meio inesperado. No começo, parece só mais uma história simples, mas tem uma doçura que fica grudada. O jeito que o menino se conecta com a topeira, esse bichinho meio estranho e meio fofinho, é aquela coisa que dá vontade de acreditar na simplicidade das coisas.
+
+Não tem aquela pressão de grandes acontecimentos ou drama pesado, sabe? É só uma vibe calma, que te faz prestar atenção no que importa: as pequenas amizades, os momentos que passam despercebidos, e até aquele silêncio confortável que a gente esquece que existe. E o menino, com toda sua inocência, meio que me lembrou da minha própria infância, quando tudo parecia mais mágico e cheio de possibilidades.
+
+No fim, o filme é tipo um respiro, um lembrete de que felicidade não precisa ser algo gigante — às vezes tá ali, nas coisas pequenas, na companhia inesperada de alguém diferente. Eu saí meio que mais leve depois de assistir. Vale a pena.</p>
+          </div>
       </div>
     </section>
 
@@ -83,17 +106,36 @@ No fim, Dias Perfeitos não é sobre mudar o mundo, mas sobre encontrar beleza n
   </div>
 </section>
 
-
-
-
-
-
-
     <!-- Livros -->
     <section id="livros" class="tab-content">
       <p>Conteúdo sobre livros será adicionado aqui.</p>
     </section>
+
+    <section id="estudos" class="tab-content" 
+  <div class="estudos-container">
+    <h1>Estudos</h1>
+    <p>Aqui compartilho reflexões, leituras e aprendizados que venho explorando, desde filosofia até temas bíblicos.</p>
+
+    <div class="study-card">
+      <img src="/img/Estudo1.png" alt="Monoteísmo em Israel">
+      <h2>Transição do Politeísmo para o Monoteísmo</h2>
+      <p>Uma análise sobre a evolução do conceito de Deus em Israel, com base em textos antigos e achados arqueológicos.</p>
+      <a href="https://www.notion.so/Unus-Ex-Pluribus-1fe88ee6c5da8066b5a7d6ee47048fe7?pvs=4" class="study-button" target="_blank">Ver estudo</a>
+    </div>
+
+    <div class="study-card">
+      <img src="/img/Estudo2.png" alt="Monoteísmo em Israel">
+      <h2>Comentário em João 1</h2>
+      <p>Exploração da simbologia do "Verbo" e a ligação entre o texto bíblico e a filosofia helenística.</p>
+      <a href="https://www.notion.so/Explora-o-da-Simbologia-do-Verbo-Logos-e-sua-Liga-o-entre-o-Texto-B-blico-e-a-Filosofia-Helen--1fe88ee6c5da8036a826d362915af43a?pvs=4" class="study-button" target="_blank">Ver estudo</a>
+    </div>
+
+    <!-- Adicione mais blocos conforme quiser -->
+  </div>
+</section>
+
   </main>
+
 
   <script src="script.js"></script>
 </body>
