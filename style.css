@@ -178,20 +178,16 @@ h2 {
 
 /* Container dos jogos terminados */
 .grid-terminados {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 16px;
-  overflow-x: auto;
-  padding-bottom: 12px;
-  scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch;
-  padding-left: 4px;
+  justify-items: center;
+  padding: 12px 4px;
 }
 
 /* Itens do jogo */
 .jogo-terminado-item {
-  flex: 0 0 auto;
   width: 110px;
-  scroll-snap-align: start;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -225,15 +221,7 @@ h2 {
   max-width: 100%;
 }
 
-/* Esconder scrollbar (Chrome, Safari) */
-.grid-terminados::-webkit-scrollbar {
-  display: none;
-}
-
-/* Esconder scrollbar (Firefox) */
-.grid-terminados {
-  scrollbar-width: none;
-}
+/* Esconder scrollbar - não mais necessário para grid */
 
 .badges-container {
   margin-top: 20px;
@@ -507,7 +495,12 @@ h2 {
     font-size: 0.9rem;
   }
   
-  /* Jogos mobile */
+  /* Jogos mobile - grid 3 colunas mantido */
+  .grid-terminados {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+  }
+  
   .jogo-terminado-item {
     width: 90px;
   }
