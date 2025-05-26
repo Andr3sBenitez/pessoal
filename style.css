@@ -30,6 +30,7 @@ nav ul.tabs {
   gap: 30px;
   margin: 0;
   padding: 0;
+  flex-wrap: wrap;
 }
 
 nav ul.tabs li a {
@@ -41,6 +42,7 @@ nav ul.tabs li a {
   border-radius: 8px;
   transition: background-color 0.3s ease, color 0.3s ease;
   user-select: none;
+  white-space: nowrap;
 }
 
 nav ul.tabs li a:hover {
@@ -54,7 +56,6 @@ nav ul.tabs li a.active {
 }
 
 /* Área principal */
-
 main {
   padding: 30px 20px;
   max-width: 1000px;
@@ -63,8 +64,7 @@ main {
 
 /* Geral para as abas */
 
-/* Apresentação - centralizado */
-
+/* Apresentação - responsivo */
 .presentation-container {
   display: flex;
   align-items: center;
@@ -85,6 +85,7 @@ main {
   border-radius: 50%;
   border: 3px solid #ccc;
   box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  flex-shrink: 0;
 }
 
 /* Usar fonte serifada elegante para os títulos da apresentação */
@@ -104,8 +105,7 @@ main {
   font-family: 'Lato', sans-serif;
 }
 
-/* Filmes - grid layout */
-
+/* Filmes - grid layout responsivo */
 .movies-grid {
   display: grid;
   grid-template-columns: 150px 1fr;
@@ -139,7 +139,6 @@ main {
 }
 
 /* Animação fadeIn */
-
 @keyframes fadeIn {
   from {opacity: 0; transform: translateY(10px);}
   to {opacity: 1; transform: translateY(0);}
@@ -258,52 +257,6 @@ h2 {
   background-color: #ccc;
 }
 
-
-.estudos-container {
-  max-width: 800px;
-  margin: auto;
-  padding: 20px;
-  font-family: 'Lato', sans-serif;
-}
-
-.study-card {
-  background-color: #f9f9f9;
-  border-radius: 12px;
-  padding: 16px 20px;
-  margin-bottom: 20px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.06);
-}
-
-.study-card h2 {
-  margin: 0 0 8px;
-  font-size: 1.4rem;
-  font-family: 'Playfair Display', serif;
-  color: #2a4d7c;
-}
-
-.study-card p {
-  margin: 0;
-  color: #444;
-  line-height: 1.6;
-}
-
-.study-button {
-  display: inline-block;
-  margin-top: 10px;
-  padding: 8px 16px;
-  background-color: #007acc;
-  color: white;
-  text-decoration: none;
-  border-radius: 6px;
-  font-family: 'Lato', sans-serif;
-  font-size: 0.95rem;
-  transition: background-color 0.3s ease;
-}
-
-.study-button:hover {
-  background-color: #005f99;
-}
-
 .estudos-container {
   max-width: 900px;
   margin: 0 auto;
@@ -348,6 +301,23 @@ h2 {
   font-family: 'Lato', sans-serif;
 }
 
+.study-button {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 16px;
+  background-color: #007acc;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-family: 'Lato', sans-serif;
+  font-size: 0.95rem;
+  transition: background-color 0.3s ease;
+}
+
+.study-button:hover {
+  background-color: #005f99;
+}
+
 .twitch-container {
   display: flex;
   justify-content: center;
@@ -389,6 +359,7 @@ h2 {
   font-size: 2rem;
   color: #222;
 }
+
 .books-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -397,21 +368,8 @@ h2 {
   padding: 20px;
 }
 
-@media (max-width: 600px) {
-  .books-grid {
-    grid-template-columns: repeat(1, 1fr); /* 1 coluna no celular */
-  }
-}
-
-@media (min-width: 601px) and (max-width: 900px) {
-  .books-grid {
-    grid-template-columns: repeat(2, 1fr); /* 2 colunas no tablet */
-  }
-}
-
-
 #livros .book-card {
-  width: 220px; /* mais largura */
+  width: 220px;
   margin: 20px;
   text-align: center;
   display: flex;
@@ -440,4 +398,252 @@ h2 {
   font-weight: 700;
 }
 
+/* ===== MOBILE RESPONSIVE STYLES ===== */
 
+/* Tablets e telas médias */
+@media (max-width: 900px) {
+  nav ul.tabs {
+    gap: 20px;
+    padding: 0 10px;
+  }
+  
+  nav ul.tabs li a {
+    font-size: 1rem;
+    padding: 6px 12px;
+  }
+  
+  main {
+    padding: 20px 15px;
+  }
+  
+  .tab-content {
+    padding: 15px 20px;
+  }
+  
+  h2 {
+    font-size: 1.7rem;
+  }
+  
+  .books-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  
+  #livros .book-card {
+    width: 180px;
+    margin: 15px;
+  }
+  
+  #livros .book-card img {
+    width: 180px;
+    height: 280px;
+  }
+}
+
+/* Smartphones */
+@media (max-width: 600px) {
+  /* Header e navegação */
+  header {
+    padding: 10px 0;
+  }
+  
+  nav ul.tabs {
+    gap: 10px;
+    padding: 0 5px;
+    justify-content: space-around;
+  }
+  
+  nav ul.tabs li a {
+    font-size: 0.9rem;
+    padding: 6px 8px;
+  }
+  
+  /* Layout principal */
+  main {
+    padding: 15px 10px;
+  }
+  
+  .tab-content {
+    padding: 10px 15px;
+  }
+  
+  /* Apresentação mobile */
+  .presentation-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .presentation-container img {
+    width: 150px;
+    height: 150px;
+  }
+  
+  .presentation-text h1 {
+    font-size: 1.8rem;
+  }
+  
+  .presentation-text p {
+    font-size: 1rem;
+    max-width: none;
+  }
+  
+  /* Filmes mobile */
+  .movies-grid {
+    grid-template-columns: 100px 1fr;
+    gap: 15px 20px;
+  }
+  
+  .movie-card img {
+    width: 90px;
+  }
+  
+  .movie-info h2 {
+    font-size: 1.2rem;
+  }
+  
+  .movie-info p {
+    font-size: 0.9rem;
+  }
+  
+  /* Jogos mobile */
+  .jogo-terminado-item {
+    width: 90px;
+  }
+  
+  .jogo-terminado-item img {
+    width: 90px;
+    height: 90px;
+  }
+  
+  .jogo-terminado-item p {
+    font-size: 0.85rem;
+  }
+  
+  .jogos-terminados h3 {
+    font-size: 1.1rem;
+  }
+  
+  /* Estudos mobile */
+  .study-card {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+    padding: 20px;
+  }
+  
+  .study-card img {
+    width: 120px;
+    height: 120px;
+  }
+  
+  .study-content h2 {
+    font-size: 1.3rem;
+  }
+  
+  .study-content p {
+    font-size: 0.95rem;
+  }
+  
+  /* Livros mobile */
+  .books-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    padding: 10px;
+  }
+  
+  #livros .book-card {
+    width: 160px;
+    margin: 10px;
+  }
+  
+  #livros .book-card img {
+    width: 160px;
+    height: 240px;
+  }
+  
+  #livros .book-card h3 {
+    font-size: 1rem;
+  }
+  
+  /* Twitch link mobile */
+  .twitch-link {
+    padding: 10px 16px;
+    gap: 10px;
+  }
+  
+  .twitch-logo {
+    width: 28px;
+    height: 28px;
+  }
+  
+  /* Títulos gerais mobile */
+  h2 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  
+  #livros h2 {
+    font-size: 1.6rem;
+  }
+  
+  /* Badges mobile */
+  .badge {
+    font-size: 0.85rem;
+    padding: 5px 10px;
+  }
+}
+
+/* Telas muito pequenas */
+@media (max-width: 380px) {
+  nav ul.tabs li a {
+    font-size: 0.8rem;
+    padding: 5px 6px;
+  }
+  
+  .presentation-container img {
+    width: 120px;
+    height: 120px;
+  }
+  
+  .presentation-text h1 {
+    font-size: 1.6rem;
+  }
+  
+  .movies-grid {
+    grid-template-columns: 80px 1fr;
+    gap: 10px 15px;
+  }
+  
+  .movie-card img {
+    width: 75px;
+  }
+  
+  .movie-info h2 {
+    font-size: 1.1rem;
+  }
+  
+  #livros .book-card {
+    width: 140px;
+  }
+  
+  #livros .book-card img {
+    width: 140px;
+    height: 210px;
+  }
+  
+  .jogo-terminado-item {
+    width: 80px;
+  }
+  
+  .jogo-terminado-item img {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .study-card img {
+    width: 100px;
+    height: 100px;
+  }
+}
