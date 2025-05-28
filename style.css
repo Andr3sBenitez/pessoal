@@ -640,3 +640,16 @@ h2 {
     height: 100px;
   }
 }
+
+.logo-fixed {
+  position: fixed;
+  top: 10px;
+  left: 20px;
+  z-index: 1000;
+}
+
+.logo-fixed img {
+  height: 40px; /* ajuste conforme necessário */
+  width: auto;
+  object-fit: contain;
+}
