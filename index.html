@@ -7,6 +7,10 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <div class="logo-fixed">
+  <img src="/img/Logo.png" alt="Logo" />
+</div>
+
   <header>
     <nav>
       <ul class="tabs">
@@ -14,7 +18,10 @@
         <li><a href="#" class="tab-link" data-tab="filmes">Filmes</a></li>
         <li><a href="#" class="tab-link" data-tab="jogos">Jogos</a></li>
         <li><a href="#" class="tab-link" data-tab="livros">Livros</a></li>
-         <li><a href="#" class="tab-link" data-tab="estudos">Estudos</a></li>
+        <li><a href="#" class="tab-link" data-tab="estudos">Estudos</a></li>
+        <li><a href="#" class="tab-link" data-tab="apostas" style="display: none;">Apostas</a></li>
+        
+         
       </ul>
     </nav>
   </header>
@@ -38,15 +45,16 @@
           <span class="badge">🎮 Jogos</span>
           <span class="badge">📚 Literatura</span>
         </div>
+</div>
+</div>
+
+
       </div>
     </div>
   </section>
 </main>
 
-
-
-    <!-- Filmes -->
-    <section id="filmes" class="tab-content">
+<section id="filmes" class="tab-content">
       <div class="movies-grid">
         <article class="movie-card">
           <img src="/img/filme1.jpg" alt="Filme 1" />
@@ -78,8 +86,19 @@ Não tem aquela pressão de grandes acontecimentos ou drama pesado, sabe? É só
 
 No fim, o filme é tipo um respiro, um lembrete de que felicidade não precisa ser algo gigante — às vezes tá ali, nas coisas pequenas, na companhia inesperada de alguém diferente. Eu saí meio que mais leve depois de assistir. Vale a pena.</p>
           </div>
+          </article>
+        <article class="movie-card">
+          <img src="/img/filme4.jpg" alt="Filme 2" />
+          <div class="movie-info">
+            <h2>A Viagem de Chihiro</h2>
+            <p> A Viagem de Chihiro é aquele tipo de filme que parece simples quando você começa, mas vai te puxando pra um mundo tão estranho, bonito e desconcertante que quando acaba, você nem sabe dizer exatamente o que sentiu. Parece um sonho. Ou melhor, um pesadelo bonito.
+
+Tudo começa bem cotidiano, né? Chihiro emburrada no banco de trás do carro, pais meio desligados… aí do nada: túnel esquisito, cidade abandonada, e puf, você tá num universo que funciona por regras próprias, com espíritos, deuses de banho, monstros gosmentos e um trem que atravessa a água. É uma mistura de conto de fadas japonês com delírio febril — mas de um jeito calmo, poético. Meio melancólico até.
+
+O mais doido é como as coisas são apresentadas: ninguém te explica nada. Os personagens falam das coisas como se tudo fosse normal, e você vai só aceitando. Tipo o Sem Rosto — ele aparece, é esquisitíssimo, e de repente tá engolindo gente. E ainda assim, a gente sente pena dele. O filme é cheio dessas criaturas bizarras que, de algum jeito, são muito humanas.<p>
+              </div>
       </div>
-    </section>
+  </section>
 
 <section id="jogos" class="tab-content">
   <div class="twitch-container">
@@ -142,8 +161,6 @@ No fim, o filme é tipo um respiro, um lembrete de que felicidade não precisa s
   </div>
 </section>
 
-
-
     <section id="estudos" class="tab-content" 
   <div class="estudos-container">
     <h1>Estudos</h1>
@@ -167,8 +184,164 @@ No fim, o filme é tipo um respiro, um lembrete de que felicidade não precisa s
   </div>
 </section>
 
-  </main>
+<section id="apostas" style="display: none" class="tab-content">
+        <div class="apostas-container">
+            
+            
+            <!-- Estatísticas -->
+            <div class="apostas-stats">
+                <div class="stat-card">
+                    <div class="stat-number">3</div>
+                    <div class="stat-label">Total de Apostas</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">Taxa de Acerto</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">+R$43.20</div>
+                    <div class="stat-label">Lucro Total</div>
+                </div>
+            </div>
 
+            <!-- Grid de Apostas -->
+            <div class="apostas-grid">
+                
+                <!-- Aposta 1 -->
+                <div class="aposta-card">
+                    <div class="aposta-header">
+                        🏆 Brasileirão 2025 • 15/05/2025
+                    </div>
+                    <div class="teams-container">
+                        <div class="team">
+                            <img src="https://logoeps.com/wp-content/uploads/2013/03/flamengo-vector-logo.png" alt="Flamengo" class="team-logo">
+                            <div class="team-name">Flamengo</div>
+                        </div>
+                        <div class="vs-divider">VS</div>
+                        <div class="team">
+                            <img src="https://logoeps.com/wp-content/uploads/2013/03/palmeiras-vector-logo.png" alt="Palmeiras" class="team-logo">
+                            <div class="team-name">Palmeiras</div>
+                        </div>
+                    </div>
+                    <div class="aposta-info">
+                        <div class="mercado">🎯 Mais de 2.5 gols</div>
+                        <div class="aposta-details">
+                            <div class="detail-item">
+                                <div class="detail-label">Stake</div>
+                                <div class="detail-value">R$ 100</div>
+                            </div>
+                            <div class="detail-item">
+                                <div class="detail-label">Odd</div>
+                                <div class="detail-value">2.40</div>
+                            </div>
+                        </div>
+                        <div class="status-badge status-ganhou">✅ GANHOU • +R$240</div>
+                    </div>
+                </div>
+
+                <!-- Aposta 2 -->
+                <div class="aposta-card">
+                    <div class="aposta-header">
+                        <img src="https://static.flashscore.com/res/image/data/E5CE5MB7-hlgaOPoR.png" alt="Logo" class="header-logo">
+                       2 Bundesliga • 27/05/2025
+                    </div>
+                    <div class="teams-container">
+                        <div class="team">
+                            <img src="https://static.flashscore.com/res/image/data/jTPygLBr-rBP4Wuhs.png" alt="Braunscheweig" class="team-logo">
+                            <div class="team-name">Braunscheweig</div>
+                        </div>
+                        <div class="vs-divider">VS</div>
+                        <div class="team">
+                            <img src="https://static.flashscore.com/res/image/data/O6Ew3GBr-rcKPySRa.png" alt="Saarbrucken" class="team-logo">
+                            <div class="team-name">Saarbrucken</div>
+                        </div>
+                    </div>
+                    <div class="aposta-info">
+                        <div class="mercado">🎯 Gol No Primeiro Tempo</div>
+                        <div class="aposta-details">
+                            <div class="detail-item">
+                                <div class="detail-label">Stake</div>
+                                <div class="detail-value">R$ 48</div>
+                            </div>
+                            <div class="detail-item">
+                                <div class="detail-label">Odd</div>
+                                <div class="detail-value">1.31</div>
+                            </div>
+                        </div>
+                        <div class="status-badge status-ganhou">✅ GANHOU • +R$14,88</div>
+                    </div>
+                </div>
+
+                <!-- Aposta 3 -->
+                <div class="aposta-card">
+                                   <div class="aposta-header">
+    <img src="https://images.seeklogo.com/logo-png/27/1/counter-strike-global-offensive-logo-png_seeklogo-273411.png" alt="Logo" class="header-logo">
+    Galaxy Battle 2025 • 27/05/2025
+</div>
+                    <div class="teams-container">
+                        <div class="team">
+                            <img src="https://img-cdn.hltv.org/teamlogo/OgMRQA35hopXA8kDwMFHIY.svg?ixlib=java-2.1.0&s=ec7bc44165c7acf4224a22a1338ab7d7" alt="Real Madrid" class="team-logo">
+                            <div class="team-name">BIG</div>
+                        </div>
+                        <div class="vs-divider">VS</div>
+                        <div class="team">
+                            <img src="https://img-cdn.hltv.org/teamlogo/gzn14uIQ6ENslja9hMqnkj.png?ixlib=java-2.1.0&w=200&s=c1c65a7f49ed32f9b1a8e73f36bbc955" alt="Barcelona" class="team-logo">
+                            <div class="team-name">Cybershoke</div>
+                        </div>
+                    </div>
+                    <div class="aposta-info">
+                        <div class="mercado">🎯 Vitória Cybershoke </div>
+                        <div class="aposta-details">
+                            <div class="detail-item">
+                                <div class="detail-label">Stake</div>
+                                <div class="detail-value">R$ 32</div>
+                            </div>
+                            <div class="detail-item">
+                                <div class="detail-label">Odd</div>
+                                <div class="detail-value">1.51</div>
+                            </div>
+                        </div>
+                        <div class="status-badge status-ganhou">✅ GANHOU • +R$16,32</div>
+                    </div>
+   </div>
+                <!-- Aposta 4 -->
+                <div class="aposta-card">
+                    <div class="aposta-header">
+    <img src="https://wallpapercat.com/w/full/c/b/1/902700-3840x2160-desktop-4k-league-of-legends-logo-background.jpg"" alt="Logo" class="header-logo">
+    Hitpoint Masters • 27/05/2025
+</div>
+                    <div class="teams-container">
+                        <div class="team">
+                            <img src="https://am-a.akamaihd.net/image?resize=36:&f=http%3A%2F%2Fstatic.lolesports.com%2Fteams%2F1642690673730_HM_EIQ_logo_1_1_use_this.png" alt="Juventus" class="team-logo">
+                            <div class="team-name">Entropiq</div>
+                        </div>
+                        <div class="vs-divider">VS</div>
+                        <div class="team">
+                            <img src="https://am-a.akamaihd.net/image?resize=36:&f=http%3A%2F%2Fstatic.lolesports.com%2Fteams%2F1705300013762_HM_ESB_logo.png" alt="Milan" class="team-logo">
+                            <div class="team-name">Esuba</div>
+                        </div>
+                    </div>
+                    <div class="aposta-info">
+                        <div class="mercado">🎯 Vitória Esuba</div>
+                        <div class="aposta-details">
+                            <div class="detail-item">
+                                <div class="detail-label">Stake</div>
+                                <div class="detail-value">R$ 20</div>
+                            </div>
+                            <div class="detail-item">
+                                <div class="detail-label">Odd</div>
+                                <div class="detail-value">1.60</div>
+                            </div>
+                        </div>
+                        <div class="status-badge status-ganhou">✅ GANHOU • +R$12,00</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+  </main>
 
   <script src="script.js"></script>
 </body>
