@@ -1,23 +1,28 @@
 /* Importar fontes do Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Lato&family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:wght@700&display=swap');
 
 /* Reset simples */
 * {
   box-sizing: border-box;
 }
 
+/* ===== TEMA PRETO PROFISSIONAL ===== */
+
 html, body {
   height: 100%;
   margin: 0;
-  background: #fff;
-  color: #222;
-  font-family: 'Lato', sans-serif; /* fonte principal do corpo */
+  background: #121212; /* Fundo principal escuro */
+  color: #e0e0e0; /* Cor de texto principal (branco suave) */
+  font-family: 'Lato', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 header {
-  background: #f7f7f7;
+  background: #1c1c1c; /* Fundo do header ligeiramente mais claro */
   padding: 15px 0;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  border-bottom: 1px solid #333; /* Linha sutil de separação */
   position: sticky;
   top: 0;
   z-index: 100;
@@ -35,7 +40,7 @@ nav ul.tabs {
 
 nav ul.tabs li a {
   text-decoration: none;
-  color: #555;
+  color: #c7c7c7; /* Cor dos links da navegação */
   font-weight: 600;
   font-size: 1.1rem;
   padding: 8px 15px;
@@ -43,16 +48,19 @@ nav ul.tabs li a {
   transition: background-color 0.3s ease, color 0.3s ease;
   user-select: none;
   white-space: nowrap;
+  border-bottom: 2px solid transparent; /* Preparação para a borda ativa */
 }
 
 nav ul.tabs li a:hover {
-  background-color: #eee;
-  color: #000;
+  background-color: #2a2a2a;
+  color: #fff;
 }
 
 nav ul.tabs li a.active {
-  background-color: #007acc;
-  color: #fff;
+  color: #cda434; /* Cor de destaque dourada */
+  background-color: transparent;
+  border-bottom: 2px solid #cda434; /* Destaque elegante para a aba ativa */
+  border-radius: 0;
 }
 
 /* Área principal */
@@ -63,19 +71,49 @@ main {
 }
 
 /* Geral para as abas */
+.tab-content {
+  display: none;
+  padding: 20px 40px;
+  box-sizing: border-box;
+  max-width: 1000px;
+  margin: 0 auto;
+}
 
-/* Apresentação - responsivo */
+.tab-content.active {
+  display: block;
+  animation: fadeIn 0.8s ease forwards;
+}
+
+/* Animação fadeIn */
+@keyframes fadeIn {
+  from {opacity: 0; transform: translateY(10px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+/* Títulos Globais */
+h1, h2, h3, h4 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+}
+
+h2 {
+  margin-bottom: 20px;
+  color: #fff;
+  text-align: left;
+  font-size: 2rem;
+}
+
+/* Apresentação */
 .presentation-container {
   display: flex;
   align-items: center;
   gap: 30px;
   max-width: 900px;
   width: 100%;
-  background: #f9f9f9;
+  background: #1f1f1f; /* Fundo de "cartão" */
   padding: 30px;
   border-radius: 12px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-  animation: fadeIn 0.8s ease forwards;
+  border: 1px solid #333;
 }
 
 .presentation-container img {
@@ -83,29 +121,45 @@ main {
   height: 200px;
   object-fit: cover;
   border-radius: 50%;
-  border: 3px solid #ccc;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  border: 3px solid #444;
   flex-shrink: 0;
 }
 
-/* Usar fonte serifada elegante para os títulos da apresentação */
 .presentation-text h1 {
   margin: 0 0 15px;
   font-size: 2.2rem;
-  color: #222;
-  font-family: 'Playfair Display', serif;
-  font-weight: 700;
+  color: #cda434; /* Destaque dourado no nome */
 }
 
 .presentation-text p {
   font-size: 1.1rem;
-  color: #444;
-  line-height: 1.5;
+  color: #b0b0b0; /* Texto secundário um pouco mais escuro */
+  line-height: 1.6;
   max-width: 500px;
-  font-family: 'Lato', sans-serif;
 }
 
-/* Filmes - grid layout responsivo */
+.badges-container {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.badge {
+  background-color: #333;
+  color: #e0e0e0;
+  font-size: 0.95rem;
+  padding: 6px 12px;
+  border-radius: 20px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.badge:hover {
+  background-color: #cda434;
+  color: #121212;
+}
+
+/* Filmes */
 .movies-grid {
   display: grid;
   grid-template-columns: 150px 1fr;
@@ -120,72 +174,72 @@ main {
 .movie-card img {
   width: 140px;
   border-radius: 8px;
-  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+  transition: transform 0.3s ease;
+}
+.movie-card img:hover {
+  transform: scale(1.05);
 }
 
 .movie-info h2 {
   margin: 0 0 8px;
   font-size: 1.5rem;
-  color: #007acc;
-  font-family: 'Playfair Display', serif;
-  font-weight: 700;
+  color: #cda434;
 }
 
 .movie-info p {
   margin: 0;
   font-size: 1rem;
-  color: #555;
-  font-family: 'Lato', sans-serif;
+  color: #b0b0b0;
+  line-height: 1.5;
 }
 
-/* Animação fadeIn */
-@keyframes fadeIn {
-  from {opacity: 0; transform: translateY(10px);}
-  to {opacity: 1; transform: translateY(0);}
+/* Jogos */
+.twitch-container {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
 }
 
-/* Container da aba */
-.tab-content {
-  display: none;
-  padding: 20px 40px;
-  box-sizing: border-box;
-  max-width: 1000px;
-  margin: 0 auto;
+.twitch-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #9146FF; /* Mantém a cor da marca Twitch */
+  color: white;
+  text-decoration: none;
+  padding: 12px 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(145, 70, 255, 0.4);
+  transition: background 0.3s ease, transform 0.2s ease;
 }
 
-.tab-content.active {
-  display: block;
+.twitch-link:hover {
+  background: #772ce8;
+  transform: scale(1.03);
 }
 
-h2 {
-  font-weight: 700;
-  margin-bottom: 20px;
-  color: #333;
-  text-align: left;
-  font-size: 2rem;
-  font-family: 'Playfair Display', serif;
+.twitch-logo {
+  width: 32px;
+  height: 32px;
 }
 
-/* Título do grupo de jogos */
 .jogos-terminados h3 {
   margin-bottom: 16px;
-  font-weight: 600;
-  color: #cc7a00;
+  font-weight: 700;
+  color: #cda434;
   font-size: 1.3rem;
   text-align: left;
-  font-family: 'Playfair Display', serif;
 }
 
-/* Container dos jogos terminados */
 .grid-terminados {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
+  grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+  gap: 20px;
   justify-items: center;
   padding: 12px 4px;
 }
 
-/* Itens do jogo */
 .jogo-terminado-item {
   width: 110px;
   display: flex;
@@ -207,13 +261,13 @@ h2 {
   border-radius: 14px;
   object-fit: cover;
   margin-bottom: 8px;
-  box-shadow: 0 3px 8px rgba(204, 122, 0, 0.5);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.5);
 }
 
 .jogo-terminado-item p {
   font-weight: 600;
   font-size: 1rem;
-  color: #cc7a00;
+  color: #cda434;
   margin: 0;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -221,46 +275,83 @@ h2 {
   max-width: 100%;
 }
 
-/* Esconder scrollbar - não mais necessário para grid */
+/* Livros */
+#livros {
+  padding: 20px;
+}
 
-.badges-container {
-  margin-top: 20px;
+#livros h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 2rem;
+  color: #fff;
+}
+
+.books-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 35px;
+  justify-items: center;
+  padding: 20px;
+}
+
+#livros .book-card {
+  width: 220px;
+  text-align: center;
   display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
+  flex-direction: column;
+  align-items: center;
 }
 
-.badge {
-  background-color: #eaeaea;
-  color: #333;
-  font-size: 0.95rem;
+#livros .book-card img {
+  width: 100%;
+  height: 330px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.6);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+#livros .book-card img:hover {
+  transform: scale(1.07);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.8);
+}
+
+#livros .book-card h3 {
+  margin-top: 15px;
+  font-size: 1.1rem;
+  color: #e0e0e0;
+  font-weight: 700;
   font-family: 'Lato', sans-serif;
-  padding: 6px 12px;
-  border-radius: 20px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-  transition: background-color 0.2s ease;
 }
 
-.badge:hover {
-  background-color: #ccc;
-}
-
+/* Estudos */
 .estudos-container {
   max-width: 900px;
   margin: 0 auto;
   padding: 20px;
 }
+.estudos-container > h1 {
+    color: #fff;
+    font-size: 2rem;
+}
+.estudos-container > p {
+    color: #b0b0b0;
+    margin-bottom: 30px;
+}
 
 .study-card {
   display: flex;
   align-items: center;
-  background: #f9f9f9;
+  background: #1f1f1f;
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
   overflow: hidden;
   margin-bottom: 20px;
   gap: 20px;
   padding: 16px;
+  border: 1px solid #333;
 }
 
 .study-card img {
@@ -269,121 +360,36 @@ h2 {
   object-fit: cover;
   border-radius: 8px;
   flex-shrink: 0;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
 }
 
-.study-content {
-  flex: 1;
-}
-
-.study-content h2 {
+.study-card h2 {
   font-size: 1.5rem;
   margin: 0 0 8px;
-  font-family: 'Playfair Display', serif;
+  color: #e0e0e0;
 }
 
-.study-content p {
+.study-card p {
   font-size: 1rem;
   margin: 0 0 12px;
-  color: #555;
-  font-family: 'Lato', sans-serif;
+  color: #a0a0a0;
 }
 
 .study-button {
   display: inline-block;
   margin-top: 10px;
   padding: 8px 16px;
-  background-color: #007acc;
-  color: white;
+  background-color: #cda434;
+  color: #121212;
   text-decoration: none;
   border-radius: 6px;
   font-family: 'Lato', sans-serif;
   font-size: 0.95rem;
+  font-weight: 700;
   transition: background-color 0.3s ease;
 }
 
 .study-button:hover {
-  background-color: #005f99;
-}
-
-.twitch-container {
-  display: flex;
-  justify-content: center;
-  margin: 2rem 0;
-}
-
-.twitch-link {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  background: #9146FF;
-  color: white;
-  text-decoration: none;
-  padding: 12px 20px;
-  border-radius: 16px;
-  box-shadow: 0 0 20px rgba(145, 70, 255, 0.4);
-  transition: background 0.3s ease, transform 0.2s ease;
-}
-
-.twitch-link:hover {
-  background: #772ce8;
-  transform: scale(1.03);
-}
-
-.twitch-logo {
-  width: 32px;
-  height: 32px;
-  filter: drop-shadow(0 0 2px black);
-}
-
-#livros {
-  padding: 20px;
-}
-
-#livros h2 {
-  text-align: center;
-  font-weight: 700;
-  margin-bottom: 25px;
-  font-size: 2rem;
-  color: #222;
-}
-
-.books-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 25px;
-  justify-items: center;
-  padding: 20px;
-}
-
-#livros .book-card {
-  width: 220px;
-  margin: 20px;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-#livros .book-card img {
-  width: 220px;
-  height: 350px;
-  object-fit: cover;
-  border-radius: 12px;
-  box-shadow: 0 6px 12px rgba(0,0,0,0.25);
-  transition: transform 0.3s ease;
-  cursor: pointer;
-}
-
-#livros .book-card img:hover {
-  transform: scale(1.07);
-}
-
-#livros .book-card h3 {
-  margin-top: 12px;
-  font-size: 1.2rem;
-  color: #222;
-  font-weight: 700;
+  background-color: #e0b440; /* Dourado mais claro no hover */
 }
 
 /* ===== MOBILE RESPONSIVE STYLES ===== */
@@ -411,21 +417,6 @@ h2 {
   h2 {
     font-size: 1.7rem;
   }
-  
-  .books-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-  }
-  
-  #livros .book-card {
-    width: 180px;
-    margin: 15px;
-  }
-  
-  #livros .book-card img {
-    width: 180px;
-    height: 280px;
-  }
 }
 
 /* Smartphones */
@@ -438,7 +429,7 @@ h2 {
   nav ul.tabs {
     gap: 10px;
     padding: 0 5px;
-    justify-content: space-around;
+    justify-content: center;
   }
   
   nav ul.tabs li a {
@@ -479,43 +470,32 @@ h2 {
   
   /* Filmes mobile */
   .movies-grid {
-    grid-template-columns: 100px 1fr;
-    gap: 15px 20px;
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 25px;
   }
-  
+
   .movie-card img {
-    width: 90px;
+    width: 120px;
+    margin: 0 auto;
   }
   
   .movie-info h2 {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
   }
   
   .movie-info p {
-    font-size: 0.9rem;
+    font-size: 0.95rem;
   }
   
-  /* Jogos mobile - grid 3 colunas mantido */
+  /* Jogos mobile */
   .grid-terminados {
-    grid-template-columns: repeat(3, 1fr);
     gap: 12px;
   }
   
-  .jogo-terminado-item {
-    width: 90px;
-  }
-  
-  .jogo-terminado-item img {
-    width: 90px;
-    height: 90px;
-  }
-  
-  .jogo-terminado-item p {
-    font-size: 0.85rem;
-  }
-  
   .jogos-terminados h3 {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
+    text-align: center;
   }
   
   /* Estudos mobile */
@@ -535,121 +515,22 @@ h2 {
     font-size: 1.3rem;
   }
   
-  .study-content p {
-    font-size: 0.95rem;
-  }
-  
   /* Livros mobile */
   .books-grid {
-    grid-template-columns: 1fr;
-    gap: 15px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
     padding: 10px;
   }
-  
   #livros .book-card {
-    width: 160px;
-    margin: 10px;
+    width: 100%;
   }
-  
   #livros .book-card img {
-    width: 160px;
-    height: 240px;
-  }
-  
-  #livros .book-card h3 {
-    font-size: 1rem;
-  }
-  
-  /* Twitch link mobile */
-  .twitch-link {
-    padding: 10px 16px;
-    gap: 10px;
-  }
-  
-  .twitch-logo {
-    width: 28px;
-    height: 28px;
+      height: auto;
   }
   
   /* Títulos gerais mobile */
-  h2 {
-    font-size: 1.5rem;
+  h2, .estudos-container > h1 {
+    font-size: 1.6rem;
     text-align: center;
   }
-  
-  #livros h2 {
-    font-size: 1.6rem;
-  }
-  
-  /* Badges mobile */
-  .badge {
-    font-size: 0.85rem;
-    padding: 5px 10px;
-  }
-}
-
-/* Telas muito pequenas */
-@media (max-width: 380px) {
-  nav ul.tabs li a {
-    font-size: 0.8rem;
-    padding: 5px 6px;
-  }
-  
-  .presentation-container img {
-    width: 120px;
-    height: 120px;
-  }
-  
-  .presentation-text h1 {
-    font-size: 1.6rem;
-  }
-  
-  .movies-grid {
-    grid-template-columns: 80px 1fr;
-    gap: 10px 15px;
-  }
-  
-  .movie-card img {
-    width: 75px;
-  }
-  
-  .movie-info h2 {
-    font-size: 1.1rem;
-  }
-  
-  #livros .book-card {
-    width: 140px;
-  }
-  
-  #livros .book-card img {
-    width: 140px;
-    height: 210px;
-  }
-  
-  .jogo-terminado-item {
-    width: 80px;
-  }
-  
-  .jogo-terminado-item img {
-    width: 80px;
-    height: 80px;
-  }
-  
-  .study-card img {
-    width: 100px;
-    height: 100px;
-  }
-}
-
-.logo-fixed {
-  position: fixed;
-  top: 10px;
-  left: 20px;
-  z-index: 1000;
-}
-
-.logo-fixed img {
-  height: 40px; /* ajuste conforme necessário */
-  width: auto;
-  object-fit: contain;
 }
