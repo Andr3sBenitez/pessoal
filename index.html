@@ -17,15 +17,13 @@
         <li><a href="#" class="tab-link" data-tab="jogos">Jogos</a></li>
         <li><a href="#" class="tab-link" data-tab="livros">Livros</a></li>
         <li><a href="#" class="tab-link" data-tab="estudos">Estudos</a></li>
+        <li><a href="#" class="tab-link" data-tab="criacao">Criação</a></li>
         <li><a href="#" class="tab-link" data-tab="apostas" style="display: none;">Apostas</a></li>
-        
-         
       </ul>
     </nav>
   </header>
 
 <main>
-  <!-- Apresentação -->
   <section id="apresentacao" class="tab-content">
     <div class="presentation-container">
       <img src="/img/perfil.jpg" alt="Foto de Apresentação" />
@@ -34,7 +32,6 @@
         <p>Sou apaixonado por cinema, jogos e livros. Este site é um espaço para compartilhar minhas paixões e interesses. Aqui você encontrará minhas recomendações, análises e muito mais. Seja bem-vindo!</p>
         <p>Fique à vontade para explorar as abas e conhecer um pouco mais sobre o que me inspira.</p>
 
-        <!-- Badges dos gostos -->
         <div class="badges-container">
           <span class="badge">🐧 Pinguins</span>
           <span class="badge">🦇 Batman</span>
@@ -101,7 +98,7 @@ O mais doido é como as coisas são apresentadas: ninguém te explica nada. Os p
 <section id="jogos" class="tab-content">
   <div class="twitch-container">
   <a href="https://www.twitch.tv/andresrbenitez" target="_blank" class="twitch-link">
-    <img src="img/logo twitch.png"Twitch Logo" class="twitch-logo">
+    <img src="img/logo twitch.png" alt="Twitch Logo" class="twitch-logo">
     <span>Assista minhas lives na Twitch</span>
   </a>
 </div>
@@ -203,39 +200,46 @@ O mais doido é como as coisas são apresentadas: ninguém te explica nada. Os p
       <img src="https://m.media-amazon.com/images/I/612B0id4gNL._AC_UF1000,1000_QL80_.jpg" />
       <h3> Marco Aurelio : Meditações </h3>
     </div>
-    <!-- Adicione mais livros aqui -->
-  </div>
+    </div>
 </section>
 
-    <section id="estudos" class="tab-content" 
-  <div class="estudos-container">
-    <h1>Estudos</h1>
-    <p>Aqui compartilho reflexões, leituras e aprendizados que venho explorando, desde filosofia até temas bíblicos.</p>
+    <section id="estudos" class="tab-content">
+      <div class="estudos-container">
+        <h1>Estudos</h1>
+        <p>Aqui compartilho reflexões, leituras e aprendizados que venho explorando, desde filosofia até temas bíblicos.</p>
 
-    <div class="study-card">
-      <img src="/img/Estudo1.png" alt="Monoteísmo em Israel">
-      <h2>Transição do Politeísmo para o Monoteísmo</h2>
-      <p>Uma análise sobre a evolução do conceito de Deus em Israel, com base em textos antigos e achados arqueológicos.</p>
-      <a href="https://www.notion.so/Unus-Ex-Pluribus-1fe88ee6c5da8066b5a7d6ee47048fe7?pvs=4" class="study-button" target="_blank">Ver estudo</a>
-    </div>
+        <div class="study-card">
+          <img src="/img/Estudo1.png" alt="Monoteísmo em Israel">
+          <h2>Transição do Politeísmo para o Monoteísmo</h2>
+          <p>Uma análise sobre a evolução do conceito de Deus em Israel, com base em textos antigos e achados arqueológicos.</p>
+          <a href="https://www.notion.so/Unus-Ex-Pluribus-1fe88ee6c5da8066b5a7d6ee47048fe7?pvs=4" class="study-button" target="_blank">Ver estudo</a>
+        </div>
 
-    <div class="study-card">
-      <img src="/img/Estudo2.png" alt="Monoteísmo em Israel">
-      <h2>Comentário em João 1</h2>
-      <p>Exploração da simbologia do "Verbo" e a ligação entre o texto bíblico e a filosofia helenística.</p>
-      <a href="https://www.notion.so/Explora-o-da-Simbologia-do-Verbo-Logos-e-sua-Liga-o-entre-o-Texto-B-blico-e-a-Filosofia-Helen--1fe88ee6c5da8036a826d362915af43a?pvs=4" class="study-button" target="_blank">Ver estudo</a>
-    </div>
-      
+        <div class="study-card">
+          <img src="/img/Estudo2.png" alt="Monoteísmo em Israel">
+          <h2>Comentário em João 1</h2>
+          <p>Exploração da simbologia do "Verbo" e a ligação entre o texto bíblico e a filosofia helenística.</p>
+          <a href="https://www.notion.so/Explora-o-da-Simbologia-do-Verbo-Logos-e-sua-Liga-o-entre-o-Texto-B-blico-e-a-Filosofia-Helen--1fe88ee6c5da8036a826d362915af43a?pvs=4" class="study-button" target="_blank">Ver estudo</a>
+        </div>
+      </div>
+    </section>
 
-    <!-- Adicione mais blocos conforme quiser -->
-  </div>
-</section>
+    <section id="criacao" class="tab-content">
+      <div class="creation-container">
+        <h2>O Grande Acaso</h2>
+        <p>A existência do universo é um evento de probabilidade incalculável. Você está prestes a tentar o impossível. Clique no botão abaixo para ver se as condições cósmicas se alinham para a criação.</p>
+        <button id="creation-button">Tentar Criar o Universo</button>
+        <div id="creation-status"></div>
+        <div id="creation-result-wrapper">
+            <div id="creation-result"></div>
+        </div>
+      </div>
+    </section>
 
 <section id="apostas" style="display: none" class="tab-content">
         <div class="apostas-container">
             
             
-            <!-- Estatísticas -->
             <div class="apostas-stats">
                 <div class="stat-card">
                     <div class="stat-number">3</div>
@@ -251,10 +255,8 @@ O mais doido é como as coisas são apresentadas: ninguém te explica nada. Os p
                 </div>
             </div>
 
-            <!-- Grid de Apostas -->
             <div class="apostas-grid">
                 
-                <!-- Aposta 1 -->
                 <div class="aposta-card">
                     <div class="aposta-header">
                         🏆 Brasileirão 2025 • 15/05/2025
@@ -286,7 +288,6 @@ O mais doido é como as coisas são apresentadas: ninguém te explica nada. Os p
                     </div>
                 </div>
 
-                <!-- Aposta 2 -->
                 <div class="aposta-card">
                     <div class="aposta-header">
                         <img src="https://static.flashscore.com/res/image/data/E5CE5MB7-hlgaOPoR.png" alt="Logo" class="header-logo">
@@ -319,7 +320,6 @@ O mais doido é como as coisas são apresentadas: ninguém te explica nada. Os p
                     </div>
                 </div>
 
-                <!-- Aposta 3 -->
                 <div class="aposta-card">
                                    <div class="aposta-header">
     <img src="https://images.seeklogo.com/logo-png/27/1/counter-strike-global-offensive-logo-png_seeklogo-273411.png" alt="Logo" class="header-logo">
@@ -351,7 +351,6 @@ O mais doido é como as coisas são apresentadas: ninguém te explica nada. Os p
                         <div class="status-badge status-ganhou">✅ GANHOU • +R$16,32</div>
                     </div>
    </div>
-                <!-- Aposta 4 -->
                 <div class="aposta-card">
                     <div class="aposta-header">
     <img src="https://wallpapercat.com/w/full/c/b/1/902700-3840x2160-desktop-4k-league-of-legends-logo-background.jpg"" alt="Logo" class="header-logo">

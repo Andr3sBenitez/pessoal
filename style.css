@@ -392,6 +392,124 @@ h2 {
   background-color: #e0b440; /* Dourado mais claro no hover */
 }
 
+/* ESTILOS PARA A ABA CRIAÇÃO */
+.creation-container {
+  text-align: center;
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 40px;
+  background: #1f1f1f;
+  border: 1px solid #333;
+  border-radius: 12px;
+}
+
+.creation-container h2 {
+  color: #cda434;
+  font-size: 2rem;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.creation-container p {
+  color: #b0b0b0;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+#creation-button {
+  background-color: #cda434;
+  color: #121212;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  font-family: 'Lato', sans-serif;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#creation-button:hover {
+  background-color: #e0b440;
+  transform: scale(1.05);
+}
+
+#creation-button:active {
+  transform: scale(0.98);
+}
+
+#creation-button:disabled {
+  background-color: #555;
+  color: #888;
+  cursor: not-allowed;
+  transform: scale(1);
+}
+
+#creation-status {
+  margin-top: 25px;
+  font-size: 1.1rem;
+  color: #888;
+  font-style: italic;
+  min-height: 25px;
+}
+
+#creation-result-wrapper {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    min-height: 30px; /* Reserva espaço para evitar pulos de layout */
+    display: flex;
+    justify-content: center;
+}
+
+#creation-result {
+    max-width: 100%;
+}
+
+.success-message {
+    color: #cda434; /* Dourado para sucesso */
+}
+
+.failure-message {
+    color: #aaa; /* Cinza para falha */
+}
+
+/* Animação de digitação */
+.typing-effect {
+  width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: .15em solid #cda434;
+  animation: typing 2.5s steps(40, end) forwards,
+             blink-caret .75s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: #cda434; }
+}
+
+/* Animação de revelação para tentativas seguintes */
+.reveal-effect {
+  animation: reveal 1s ease-out forwards;
+}
+
+@keyframes reveal {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
 /* ===== MOBILE RESPONSIVE STYLES ===== */
 
 /* Tablets e telas médias */
