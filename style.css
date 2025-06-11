@@ -586,6 +586,11 @@ h2 {
     max-width: none;
   }
   
+  /* CORREÇÃO ADICIONADA AQUI */
+  .badges-container {
+    justify-content: center;
+  }
+  
   /* Filmes mobile */
   .movies-grid {
     grid-template-columns: 1fr;
