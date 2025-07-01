@@ -143,7 +143,7 @@ h2 {
   padding-bottom: 15px;
 }
 
-/* ===== WIDGET "NO MOMENTO" (Layout Corrigido) ===== */
+/* ===== WIDGET "NO MOMENTO" ===== */
 .right-sidebar-widget h3 {
     font-size: 1.3rem;
     font-weight: 600;
@@ -153,28 +153,26 @@ h2 {
 }
 
 .widget-card {
-    display: flex; /* <<< MUDANÇA: Alinha imagem e texto lado a lado */
-    align-items: center; /* Centraliza verticalmente */
-    gap: 15px; /* Espaço entre a imagem e o texto */
+    display: flex;
+    align-items: center;
+    gap: 15px;
     background-color: #f9f9f9;
     border: 1px solid #eee;
     border-radius: 12px;
     margin-bottom: 15px;
-    padding: 12px; /* Adiciona um respiro interno */
+    padding: 12px;
 }
 
-/* Estilo para a nova miniatura da imagem */
-/* Estilo para a nova miniatura da imagem */
 .widget-thumbnail {
-    width: 70px; /* Largura fixa para a miniatura */
-    height: 100px; /* Altura proporcional para a capa */
+    width: 75px;
+    height: 105px;
     object-fit: cover;
     border-radius: 6px;
     flex-shrink: 0;
 }
 
 .widget-content {
-    padding: 0; /* Remove o padding antigo pois já temos no card */
+    padding: 0;
 }
 
 .widget-content h4 {
@@ -302,63 +300,74 @@ h2 {
     margin-bottom: 15px;
 }
 
-/* SEÇÃO DE LINKS DETALHADOS (PAINEL LINKS) */
-.links-container-detailed {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 15px;
+/* ===== SEÇÃO DESTAQUES ===== */
+.highlights-section {
+    margin-top: 40px;
+    padding-top: 30px;
+    border-top: 1px solid #eee;
 }
 
-.link-card {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  background-color: #f9f9f9;
-  border: 1px solid #eee;
-  padding: 20px;
-  border-radius: 12px;
-  text-decoration: none;
-  color: inherit;
-  transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+.highlights-section h4 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 20px;
 }
 
-.link-card:hover {
-  transform: translateY(-3px);
-  background-color: #fff;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.07);
+.highlights-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
 }
 
-.link-card > i {
-  font-size: 2.2rem;
-  color: #333;
+.highlight-card {
+    display: flex;
+    flex-direction: column;
+    background-color: #f9f9f9;
+    border: 1px solid #eee;
+    padding: 25px;
+    border-radius: 12px;
+    text-decoration: none;
+    color: #333;
+    transition: all 0.3s ease;
 }
 
-.link-content {
-  flex-grow: 1;
+.highlight-card:hover {
+    transform: translateY(-5px);
+    border-color: #ccc;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
 }
 
-.link-content strong {
-  font-size: 1.1rem;
-  font-weight: 600;
-  display: block;
-  margin-bottom: 4px;
+.highlight-icon {
+    font-size: 2.5rem;
+    color: #000;
+    margin-bottom: 15px;
 }
 
-.link-content p {
-  font-size: 0.95rem;
-  color: #666;
-  line-height: 1.5;
-  margin: 0;
+.highlight-content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
 }
 
-.arrow-icon {
-  font-size: 1.5rem;
-  color: #aaa;
-  transition: transform 0.2s ease;
+.highlight-content h5 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #000;
+    margin: 0 0 8px 0;
 }
 
-.link-card:hover .arrow-icon {
-  transform: translateX(5px);
+.highlight-content p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: #555;
+    margin: 0 0 15px 0;
+    flex-grow: 1;
+}
+
+.highlight-content span {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: #000;
 }
 
 /* ===== SEÇÃO FILMES ===== */
@@ -464,8 +473,8 @@ h2 {
 }
 .book-card img {
     width: 100%;
-    height: auto; /* Permite que a altura seja automática e proporcional */
-    object-fit: contain; /* Garante que a imagem inteira apareça */
+    height: auto;
+    object-fit: contain;
     border-radius: 8px;
     transition: transform .2s ease;
 }
@@ -596,7 +605,13 @@ h2 {
 @keyframes reveal { from { opacity: 0; transform: scale(0.8); } to { opacity: 1; transform: scale(1); } }
 
 
-/* ===== RESPONSIVIDADE ===== */
+/*
+====================================
+RESPONSIVIDADE (MOBILE)
+====================================
+*/
+
+/* Esconde o widget da direita em telas médias e pequenas */
 @media (max-width: 1300px) {
     .right-sidebar-widget {
         display: none;
@@ -609,178 +624,152 @@ h2 {
     }
 }
 
+/* Ajustes principais para telas de tablet e celular */
 @media (max-width: 768px) {
-  body {
-    flex-direction: column;
-  }
-  .sidebar {
-    width: 100%;
-    height: auto;
-    position: static;
-    flex-direction: row;
-    align-items: center;
-    padding: 5px;
-    border-right: none;
-    border-bottom: 1px solid #e5e5e5;
-  }
-  .sidebar nav {
-    flex-grow: 1;
-  }
-  .sidebar ul.tabs {
-    flex-direction: row;
-    justify-content: flex-start;
-  }
-  .sidebar ul.tabs li a {
-    padding: 8px;
-  }
-  .sidebar ul.tabs li a span {
-    display: none;
-  }
-  .logo {
-    display: none;
-  }
-  main {
-    margin-left: 0;
-    padding: 20px;
-    max-width: 100%;
-  }
-  h2 {
-      font-size: 1.5rem;
-  }
-  .presentation-wrapper {
-      flex-direction: column;
-      gap: 20px;
-  }
-  .presentation-sidebar.icon-only {
-      width: 100%;
-      border-right: none;
-      padding-right: 0;
-      border-bottom: 1px solid #eee;
-      padding-bottom: 15px;
-  }
-  .presentation-sidebar.icon-only ul {
-      flex-direction: row;
-      justify-content: center;
-  }
-  .presentation-container {
-    flex-direction: column;
-    text-align: center;
-  }
-  .movie-card {
-    grid-template-columns: 1fr;
-    text-align: center;
-  }
-  .movie-card img {
-      width: 50%;
-      max-width: 180px;
-      margin: 0 auto 15px auto;
-  }
-  .movie-info {
-      text-align: left;
-  }
-  .books-grid {
-      grid-template-columns: 1fr 1fr;
-      gap: 20px;
-  }
-  .study-card {
-      flex-direction: column;
-      text-align: center;
-  }
-  .link-card {
-      padding: 15px;
-      gap: 15px;
-  }
-  .link-card > i {
-      font-size: 1.8rem;
-  }
-  .link-content strong {
-      font-size: 1rem;
-  }
-  .link-content p {
-      font-size: 0.9rem;
-  }
-}
+    body {
+        flex-direction: column;
+    }
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: static;
+        flex-direction: row;
+        align-items: center;
+        padding: 5px;
+        border-right: none;
+        border-bottom: 1px solid #e5e5e5;
+    }
+    .sidebar nav {
+        flex-grow: 1;
+    }
+    .sidebar ul.tabs {
+        flex-direction: row;
+        justify-content: flex-start;
+        gap: 0;
+    }
+    .sidebar ul.tabs li a {
+        padding: 10px;
+    }
+    .sidebar ul.tabs li a span {
+        display: none;
+    }
+    .logo {
+        display: none;
+    }
+    main {
+        margin-left: 0;
+        padding: 20px;
+        max-width: 100%;
+    }
+    h2 {
+        font-size: 1.6rem;
+        margin-bottom: 20px;
+        padding-bottom: 10px;
+    }
+    
+    /* Apresentação Mobile */
+    .presentation-wrapper {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .presentation-sidebar.icon-only {
+        width: 100%;
+        border-right: none;
+        padding-right: 0;
+        border-bottom: 1px solid #eee;
+        padding-bottom: 15px;
+    }
+    .presentation-sidebar.icon-only ul {
+        flex-direction: row;
+        justify-content: center;
+        gap: 5px;
+    }
+    .presentation-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+    .presentation-container img {
+        width: 120px;
+        height: 120px;
+    }
+    .presentation-text h1 {
+        font-size: 1.8rem;
+    }
 
-/*
-====================================
-/*
-==========================================================
-ESTILOS PARA A SEÇÃO DE DESTAQUES (DESIGN SEM IMAGENS)
-==========================================================
-*/
-
-.highlights-section {
-    margin-top: 40px;
-    padding-top: 30px;
-    border-top: 1px solid #eee;
-}
-
-.highlights-section h4 {
-    font-size: 1.3rem;
-    font-weight: 600;
-    margin-bottom: 20px;
-}
-
-.highlights-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 colunas */
-    gap: 20px;
-}
-
-.highlight-card {
-    display: flex;
-    flex-direction: column; /* Organiza o conteúdo em coluna (ícone, texto, link) */
-    background-color: #f9f9f9;
-    border: 1px solid #eee;
-    padding: 25px;
-    border-radius: 12px;
-    text-decoration: none;
-    color: #333;
-    transition: all 0.3s ease;
-}
-
-.highlight-card:hover {
-    transform: translateY(-5px);
-    border-color: #ccc;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
-}
-
-.highlight-icon {
-    font-size: 2.5rem; /* Tamanho do ícone */
-    color: #000;
-    margin-bottom: 15px;
-}
-
-.highlight-content {
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1; /* Faz este container crescer para que todos os cards tenham a mesma altura */
-}
-
-.highlight-content h5 {
-    font-size: 1.2rem;
-    font-weight: 700;
-    color: #000;
-    margin: 0 0 8px 0;
-}
-
-.highlight-content p {
-    font-size: 0.95rem;
-    line-height: 1.5;
-    color: #555;
-    margin: 0 0 15px 0;
-    flex-grow: 1; /* Empurra o "Ver mais" para o final do card */
-}
-
-.highlight-content span {
-    font-weight: 600;
-    font-size: 0.9rem;
-    color: #000;
-}
-
-/* Responsividade para os destaques */
-@media (max-width: 900px) {
+    /* Destaques Mobile */
     .highlights-grid {
-        grid-template-columns: 1fr; /* Uma coluna em telas menores */
+        grid-template-columns: 1fr;
+    }
+    .highlights-section h4 {
+        text-align: center;
+        font-size: 1.2rem;
+    }
+
+    /* Filmes Mobile */
+    .movie-card {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        text-align: left;
+    }
+    .movie-card img {
+        width: 100%;
+        max-width: 200px;
+        margin: 0 auto;
+    }
+    .movie-info h3 {
+        font-size: 1.3rem;
+        text-align: center;
+    }
+    .movie-info p {
+        font-size: 0.95rem;
+    }
+
+    /* Jogos Mobile */
+    .grid-terminados {
+        gap: 15px;
+    }
+    .jogo-terminado-item p {
+        font-size: 0.9rem;
+    }
+    
+    /* Livros Mobile */
+    .books-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+    }
+    .book-card h3 {
+        font-size: 0.9rem;
+    }
+    
+    /* Estudos Mobile */
+    .study-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px;
+    }
+    .study-card img {
+        width: 100px;
+        height: 100px;
+    }
+    .study-info h3 {
+        font-size: 1.2rem;
+    }
+    
+    /* Links Mobile */
+    .link-card {
+        padding: 15px;
+        gap: 15px;
+        flex-direction: column;
+        text-align: center;
+    }
+    .link-card .arrow-icon {
+        display: none;
+    }
+    .link-content strong {
+        font-size: 1rem;
+    }
+    .link-content p {
+        font-size: 0.9rem;
     }
 }
