@@ -5,390 +5,273 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Andres</title>
   <link rel="stylesheet" href="style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
 </head>
 <body>
-</div>
 
-  <header>
+  <aside class="sidebar">
+    <a href="#" class="logo">
+      Andres
+    </a>
     <nav>
       <ul class="tabs">
-        <li><a href="#" class="tab-link" data-tab="apresentacao">Apresentação</a></li>
-        <li><a href="#" class="tab-link" data-tab="filmes">Filmes</a></li>
-        <li><a href="#" class="tab-link" data-tab="jogos">Jogos</a></li>
-        <li><a href="#" class="tab-link" data-tab="livros">Livros</a></li>
-        <li><a href="#" class="tab-link" data-tab="estudos">Estudos</a></li>
-        <li><a href="#" class="tab-link" data-tab="criacao">Criação</a></li>
-        <li><a href="#" class="tab-link" data-tab="apostas" style="display: none;">Apostas</a></li>
+        <li><a href="#" class="tab-link active" data-tab="apresentacao"><i class="ri-user-3-line"></i><span>Apresentação</span></a></li>
+        <li><a href="#" class="tab-link" data-tab="estudos"><i class="ri-lightbulb-flash-line"></i><span>Estudos</span></a></li>
+        <li><a href="#" class="tab-link" data-tab="criacao"><i class="ri-earth-line"></i><span>Criação</span></a></li>
       </ul>
     </nav>
-  </header>
+  </aside>
 
-<main>
-  <section id="apresentacao" class="tab-content">
-    <div class="presentation-container">
-      <img src="/img/perfil.jpg" alt="Foto de Apresentação" />
-      <div class="presentation-text">
-        <h1>Olá, eu sou Andres</h1>
-        <p>Sou apaixonado por cinema, jogos e livros. Este site é um espaço para compartilhar minhas paixões e interesses. Aqui você encontrará minhas recomendações, análises e muito mais. Seja bem-vindo!</p>
-        <p>Fique à vontade para explorar as abas e conhecer um pouco mais sobre o que me inspira.</p>
+  <main>
+    <div class="main-content-column">
+        <section id="apresentacao" class="tab-content active">
+            <div class="presentation-wrapper">
+                <aside class="presentation-sidebar icon-only">
+                    <nav>
+                        <ul>
+                            <li><a href="#" class="subnav-link active" data-subtab="sub-sobre" title="Sobre"><i class="ri-user-3-line"></i></a></li>
+                            <li><a href="#" class="subnav-link" data-subtab="sub-filmes" title="Filmes"><i class="ri-film-line"></i></a></li>
+                            <li><a href="#" class="subnav-link" data-subtab="sub-jogos" title="Jogos"><i class="ri-gamepad-line"></i></a></li>
+                            <li><a href="#" class="subnav-link" data-subtab="sub-livros" title="Livros"><i class="ri-book-open-line"></i></a></li>
+                            <li><a href="#" class="subnav-link" data-subtab="sub-links" title="Links"><i class="ri-links-line"></i></a></li>
+                        </ul>
+                    </nav>
+                </aside>
+        
+                <div class="presentation-content-area">
+                    <div id="sub-sobre" class="subtab-pane active">
+                        <div class="presentation-container">
+                            <img src="/img/perfil.jpg" alt="Foto de Apresentação" />
+                            <div class="presentation-text">
+                                <h1>Olá, eu sou Andres</h1>
+                                <p>Sou apaixonado por cinema, jogos e livros. Este site é um espaço para compartilhar minhas paixões e interesses. Aqui você encontrará minhas recomendações, análises e muito mais. Seja bem-vindo!</p>
+                                <div class="badges-container">
+                                    <span class="badge">🐧 Pinguins</span> <span class="badge">🦇 Batman</span> <span class="badge">🎭 Shakespeare</span> <span class="badge">🎬 Cinema</span> <span class="badge">🎮 Jogos</span> <span class="badge">📚 Literatura</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-        <div class="badges-container">
-          <span class="badge">🐧 Pinguins</span>
-          <span class="badge">🦇 Batman</span>
-          <span class="badge">🎭 Shakespeare</span>
-          <span class="badge">🎬 Cinema</span>
-          <span class="badge">🎮 Jogos</span>
-          <span class="badge">📚 Literatura</span>
-        </div>
+<div class="highlights-section">
+    <h4>Destaques do Site</h4>
+    <div class="highlights-grid">
+
+        <a href="#" class="highlight-card" data-main-tab="apresentacao" data-sub-tab="sub-filmes">
+            <i class="ri-film-line highlight-icon"></i>
+            <div class="highlight-content">
+                <h5>Críticas de Cinema</h5>
+                <p>Análises sobre obras que me marcaram.</p>
+                <span>Ver mais &rarr;</span>
+            </div>
+        </a>
+
+        <a href="#" class="highlight-card" data-main-tab="apresentacao" data-sub-tab="sub-livros">
+            <i class="ri-book-open-line highlight-icon"></i>
+            <div class="highlight-content">
+                <h5>Recomendações de Livros</h5>
+                <p>Uma coleção de leituras essenciais.</p>
+                <span>Ver mais &rarr;</span>
+            </div>
+        </a>
+
+        <a href="#" class="highlight-card" data-main-tab="estudos" data-sub-tab="">
+            <i class="ri-lightbulb-flash-line highlight-icon"></i>
+            <div class="highlight-content">
+                <h5>Meus Estudos</h5>
+                <p>Reflexões sobre filosofia e outros temas.</p>
+                <span>Ver mais &rarr;</span>
+            </div>
+        </a>
+
+    </div>
 </div>
-</div>
-
-
-      </div>
-    </div>
-  </section>
-</main>
-
-<section id="filmes" class="tab-content">
-      <div class="movies-grid">
-        <article class="movie-card">
-          <img src="/img/filme1.jpg" alt="Filme 1" />
-          <div class="movie-info">
-            <h2>Penguin's Memory</h2>
-            <p>Sem dúvidas, Penguins Memory é um filme que toca fundo na alma. O personagem principal, Mike, retorna de uma guerra marcada por traumas invisíveis e encontra seu lar irreconhecível — um lugar que não mais reflete quem ele se tornou. Perdido entre o passado que o aprisiona e o futuro que deseja, ele decide partir em busca dos seus sonhos, na esperança de reencontrar a si mesmo.
-
-No caminho, o amor surge como uma luz tênue, oferecendo conforto e uma nova razão para seguir. Mas Penguins Memory não se limita a um romance; é uma jornada sobre identidade, perda e a eterna luta interna para se reconstruir após o caos. O filme usa com maestria elementos simbólicos e uma narrativa delicada para mostrar como o passado pode assombrar, mas também como o afeto pode ajudar a curar.</p>
-          </div>
-        </article>
-        <article class="movie-card">
-          <img src="/img/filme2.jpg" alt="Filme 2" />
-          <div class="movie-info">
-            <h2>Dias Perfeitos</h2>
-            <p>Dias Perfeitos é um daqueles filmes que parecem simples, mas dizem muito. A história acompanha alguém que leva uma vida super básica — rotina, silêncio, nada grandioso — mas aos poucos a gente percebe que existe uma paz ali. Um tipo de felicidade que vem das coisas pequenas: a luz passando pelas árvores, uma música tocando no rádio, um sorriso trocado sem pressa.
-
-O filme mostra que não precisa de muito pra viver bem. Não tem grandes reviravoltas nem cenas explosivas — e é exatamente isso que torna tudo tão bonito. Ele faz a gente repensar a correria, o excesso, e mostra que às vezes só estar presente já é suficiente.
-
-No fim, Dias Perfeitos não é sobre mudar o mundo, mas sobre encontrar beleza no mundo como ele é. Calmo, imperfeito e, ainda assim, cheio de sentido.</p>
-          </div>
-        </article>
-        <article class="movie-card">
-          <img src="/img/filme3.jpg" alt="Filme 1" />
-          <div class="movie-info">
-            <h2>O Menino, A Toupeira, A Raposa E O Cavalo</h2>
-            <p>Cara, esse filme me pegou de um jeito meio inesperado. No começo, parece só mais uma história simples, mas tem uma doçura que fica grudada. O jeito que o menino se conecta com a topeira, esse bichinho meio estranho e meio fofinho, é aquela coisa que dá vontade de acreditar na simplicidade das coisas.
-
-Não tem aquela pressão de grandes acontecimentos ou drama pesado, sabe? É só uma vibe calma, que te faz prestar atenção no que importa: as pequenas amizades, os momentos que passam despercebidos, e até aquele silêncio confortável que a gente esquece que existe. E o menino, com toda sua inocência, meio que me lembrou da minha própria infância, quando tudo parecia mais mágico e cheio de possibilidades.
-
-No fim, o filme é tipo um respiro, um lembrete de que felicidade não precisa ser algo gigante — às vezes tá ali, nas coisas pequenas, na companhia inesperada de alguém diferente. Eu saí meio que mais leve depois de assistir. Vale a pena.</p>
-          </div>
-          </article>
-        <article class="movie-card">
-          <img src="/img/filme4.jpg" alt="Filme 2" />
-          <div class="movie-info">
-            <h2>A Viagem de Chihiro</h2>
-            <p> A Viagem de Chihiro é aquele tipo de filme que parece simples quando você começa, mas vai te puxando pra um mundo tão estranho, bonito e desconcertante que quando acaba, você nem sabe dizer exatamente o que sentiu. Parece um sonho. Ou melhor, um pesadelo bonito.
-
-Tudo começa bem cotidiano, né? Chihiro emburrada no banco de trás do carro, pais meio desligados… aí do nada: túnel esquisito, cidade abandonada, e puf, você tá num universo que funciona por regras próprias, com espíritos, deuses de banho, monstros gosmentos e um trem que atravessa a água. É uma mistura de conto de fadas japonês com delírio febril — mas de um jeito calmo, poético. Meio melancólico até.
-
-O mais doido é como as coisas são apresentadas: ninguém te explica nada. Os personagens falam das coisas como se tudo fosse normal, e você vai só aceitando. Tipo o Sem Rosto — ele aparece, é esquisitíssimo, e de repente tá engolindo gente. E ainda assim, a gente sente pena dele. O filme é cheio dessas criaturas bizarras que, de algum jeito, são muito humanas.<p>
-              </div>
-      </div>
-  </section>
-
-<section id="jogos" class="tab-content">
-  <div class="twitch-container">
-  <a href="https://www.twitch.tv/pinguimmaligno" target="_blank" class="twitch-link">
-    <img src="img/logo twitch.png" alt="Twitch Logo" class="twitch-logo">
-    <span>Assista minhas lives na Twitch</span>
-  </a>
-</div>
-  <div class="jogos-terminados">
-    <h3>🏆 Jogos Terminados em live</h3>
-    <div class="grid-terminados">
-      <div class="jogo-terminado-item" title="Dark Souls 3">
-        <img src="/img/jogo1-terminado.jpg" alt="Dark Souls 3" />
-        <p>Dark Souls 3</p>
-      </div>
-      <div class="jogo-terminado-item" title="Bloodborne">
-        <img src="/img/jogo2-terminado.jpg" alt="Bloodborne" />
-        <p>Bloodborne</p>
-      </div>
-      <div class="jogo-terminado-item" title="Detroit Become Human">
-        <img src="/img/jogo3-terminado.jpg" alt="Detroit Become Human" />
-        <p>Detroit Become Human</p>
-      </div>
-      <div class="jogo-terminado-item" title="Hollow Knight">
-        <img src="/img/jogo4-terminado.jpg" alt="Hollow Knight" />
-        <p>Hollow Knight</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-  <section id="livros" class="tab-content">
-  <h2>Minhas Recomendações</h2>
-  <div class="books-grid">
-    <div class="book-card">
-      <img src="/img/Livro1.jpg" alt="Capa do livro 1" />
-      <h3>Romeu e Julieta</h3>
-    </div>
-   <div class="book-card">
-      <img src="/img/Livro2.jpg" alt="Capa do livro 1" />
-      <h3>Hamlet</h3>
-    </div>
-    <div class="book-card">
-      <img src="/img/livro3.jpg" alt="Capa do livro 3" />
-      <h3>Otelo</h3>
-    </div>
-      <div class="book-card">
-      <img src="/img/livro6.jpg" alt="Capa do livro 3" />
-      <h3>Sherlock Holmes : Um Estudo em vermelho</h3>
-    </div>
-      <div class="book-card">
-      <img src="/img/livro7.png" alt="Capa do livro 3" />
-      <h3>Sherlock Holmes: O Cão Dos Baskervilles</h3>
-    </div>
-      <div class="book-card">
-      <img src="/img/livro8.png" alt="Capa do livro 3" />
-      <h3>Sherlock Holmes: O Signo Dos Quatros</h3>
-    </div>
-     <div class="book-card">
-      <img src="https://m.media-amazon.com/images/I/71VQR8rTBXL._AC_UF1000,1000_QL80_DpWeblab_.jpg" alt="Capa do livro 3" />
-      <h3>Santo Agostinho: Confissões</h3>
-    </div>
-       <div class="book-card">
-      <img src="https://m.media-amazon.com/images/I/71FvmGwhFXL.jpg" alt="Capa do livro 3" />
-      <h3>Santo Agostinho: Cidade De Deus </h3>
-    </div>
-     <div class="book-card">
-      <img src="https://m.media-amazon.com/images/I/91FMPAzh5AL._AC_UF1000,1000_QL80_.jpg" alt="Capa do livro 3" />
-      <h3>Tomás De Kempis: Imitação de Cristo </h3>
-    </div>
-      <div class="book-card">
-      <img src="https://m.media-amazon.com/images/I/61r-3VfJbRL._AC_UF1000,1000_QL80_.jpg" alt="Capa do livro 3" />
-      <h3>Friedrich Nietzsche: O Anticristo </h3>
-    </div>
-    <div class="book-card">
-      <img src="https://m.media-amazon.com/images/I/81gfDnn7qgL._AC_UF1000,1000_QL80_.jpg" alt="Capa do livro 3" />
-      <h3> Sigmund Freud: A interpretação Dos Sonhos </h3>
-    </div>
-      <div class="book-card">
-      <img src="https://m.media-amazon.com/images/I/81TNzkUcNzL.jpg" />
-      <h3> Séneca: Sobre A Brevidade Da Vida </h3>
-    </div>
-       <div class="book-card">
-      <img src="https://m.media-amazon.com/images/I/21zoOEArgTL._AC_UF1000,1000_QL80_.jpg" />
-      <h3> Jean Paul Sartre: O Ser e o Nada </h3>
-    </div>
-        <div class="book-card">
-      <img src="https://m.media-amazon.com/images/I/41Bqlqzr-IL._SY466_.jpg" />
-      <h3> Plotino : As Enéadas </h3>
-    </div>
-       <div class="book-card">
-      <img src="https://m.media-amazon.com/images/I/51bNY09w--L.jpg" />
-      <h3> Lao Tsé: Tao Te Ching </h3>
-    </div>
-         <div class="book-card">
-      <img src="https://m.media-amazon.com/images/I/61XFqlHX+rL._AC_UF1000,1000_QL80_.jpg" />
-      <h3> Dogen:Shōbōgenzō </h3>
-    </div>
-         <div class="book-card">
-      <img src="https://m.media-amazon.com/images/I/61FHvMia1bL._AC_UF1000,1000_QL80_.jpg" />
-      <h3> Heráclito : Fragmentos Contextualizados </h3>
-    </div>
-         <div class="book-card">
-      <img src="https://m.media-amazon.com/images/I/612B0id4gNL._AC_UF1000,1000_QL80_.jpg" />
-      <h3> Marco Aurelio : Meditações </h3>
-    </div>
-    </div>
-</section>
-
-    <section id="estudos" class="tab-content">
-      <div class="estudos-container">
-        <h1>Estudos</h1>
-        <p>Aqui compartilho reflexões, leituras e aprendizados que venho explorando, desde filosofia até temas bíblicos.</p>
-
-        <div class="study-card">
-          <img src="/img/Estudo1.png" alt="Monoteísmo em Israel">
-          <h2>Transição do Politeísmo para o Monoteísmo</h2>
-          <p>Uma análise sobre a evolução do conceito de Deus em Israel, com base em textos antigos e achados arqueológicos.</p>
-          <a href="https://www.notion.so/Unus-Ex-Pluribus-1fe88ee6c5da8066b5a7d6ee47048fe7?pvs=4" class="study-button" target="_blank">Ver estudo</a>
-        </div>
-
-        <div class="study-card">
-          <img src="/img/Estudo2.png" alt="Monoteísmo em Israel">
-          <h2>Comentário em João 1</h2>
-          <p>Exploração da simbologia do "Verbo" e a ligação entre o texto bíblico e a filosofia helenística.</p>
-          <a href="https://www.notion.so/Explora-o-da-Simbologia-do-Verbo-Logos-e-sua-Liga-o-entre-o-Texto-B-blico-e-a-Filosofia-Helen--1fe88ee6c5da8036a826d362915af43a?pvs=4" class="study-button" target="_blank">Ver estudo</a>
-        </div>
-      </div>
-    </section>
-
-    <section id="criacao" class="tab-content">
-      <div class="creation-container">
-        <h2>O Grande Acaso</h2>
-        <p>A existência do universo é um evento de probabilidade incalculável. Você está prestes a tentar o impossível. Clique no botão abaixo para ver se as condições cósmicas se alinham para a criação.</p>
-        <button id="creation-button">Tentar Criar o Universo</button>
-        <div id="creation-status"></div>
-        <div id="creation-result-wrapper">
-            <div id="creation-result"></div>
-        </div>
-      </div>
-    </section>
-
-<section id="apostas" style="display: none" class="tab-content">
-        <div class="apostas-container">
-            
-            
-            <div class="apostas-stats">
-                <div class="stat-card">
-                    <div class="stat-number">3</div>
-                    <div class="stat-label">Total de Apostas</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number">100%</div>
-                    <div class="stat-label">Taxa de Acerto</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number">+R$43.20</div>
-                    <div class="stat-label">Lucro Total</div>
+        
+                    <div id="sub-filmes" class="subtab-pane">
+                        <h2>Filmes</h2>
+                        <div class="movies-container">
+                            <article class="movie-card">
+                              <img src="/img/filme1.jpg" alt="Penguin's Memory" />
+                              <div class="movie-info">
+                                <h3>Penguin's Memory</h3>
+                                <p>Sem dúvidas, Penguins Memory é um filme que toca fundo na alma. O personagem principal, Mike, retorna de uma guerra marcada por traumas invisíveis e encontra seu lar irreconhecível — um lugar que não mais reflete quem ele se tornou. Perdido entre o passado que o aprisiona e o futuro que deseja, ele decide partir em busca dos seus sonhos, na esperança de reencontrar a si mesmo.</p>
+                                <p>No caminho, o amor surge como uma luz tênue, oferecendo conforto e uma nova razão para seguir. Mas Penguins Memory não se limita a um romance; é uma jornada sobre identidade, perda e a eterna luta interna para se reconstruir após o caos. O filme usa com maestria elementos simbólicos e uma narrativa delicada para mostrar como o passado pode assombrar, mas também como o afeto pode ajudar a curar.</p>
+                              </div>
+                            </article>
+                            <article class="movie-card">
+                              <img src="/img/filme2.jpg" alt="Dias Perfeitos" />
+                              <div class="movie-info">
+                                <h3>Dias Perfeitos</h3>
+                                <p>Dias Perfeitos é um daqueles filmes que parecem simples, mas dizem muito. A história acompanha alguém que leva uma vida super básica — rotina, silêncio, nada grandioso — mas aos poucos a gente percebe que existe uma paz ali. Um tipo de felicidade que vem das coisas pequenas: a luz passando pelas árvores, uma música tocando no rádio, um sorriso trocado sem pressa.</p>
+                                <p>O filme mostra que não precisa de muito pra viver bem. Não tem grandes reviravoltas nem cenas explosivas — e é exatamente isso que torna tudo tão bonito. Ele faz a gente repensar a correria, o excesso, e mostra que às vezes só estar presente já é suficiente. No fim, Dias Perfeitos não é sobre mudar o mundo, mas sobre encontrar beleza no mundo como ele é. Calmo, imperfeito e, ainda assim, cheio de sentido.</p>
+                              </div>
+                            </article>
+                            <article class="movie-card">
+                              <img src="/img/filme3.jpg" alt="O Menino, A Toupeira, A Raposa E O Cavalo" />
+                              <div class="movie-info">
+                                <h3>O Menino, A Toupeira, A Raposa E O Cavalo</h3>
+                                <p>Cara, esse filme me pegou de um jeito meio inesperado. No começo, parece só mais uma história simples, mas tem uma doçura que fica grudada. O jeito que o menino se conecta com a topeira, esse bichinho meio estranho e meio fofinho, é aquela coisa que dá vontade de acreditar na simplicidade das coisas.</p>
+                                <p>Não tem aquela pressão de grandes acontecimentos ou drama pesado, sabe? É só uma vibe calma, que te faz prestar atenção no que importa: as pequenas amizades, os momentos que passam despercebidos, e até aquele silêncio confortável que a gente esquece que existe. E o menino, com toda sua inocência, meio que me lembrou da minha própria infância, quando tudo parecia mais mágico e cheio de possibilidades. No fim, o filme é tipo um respiro, um lembrete de que felicidade não precisa ser algo gigante — às vezes tá ali, nas coisas pequenas, na companhia inesperada de alguém diferente. Eu saí meio que mais leve depois de assistir. Vale a pena.</p>
+                              </div>
+                              </article>
+                            <article class="movie-card">
+                              <img src="/img/filme4.jpg" alt="A Viagem de Chihiro" />
+                              <div class="movie-info">
+                                <h3>A Viagem de Chihiro</h3>
+                                <p>A Viagem de Chihiro é aquele tipo de filme que parece simples quando você começa, mas vai te puxando pra um mundo tão estranho, bonito e desconcertante que quando acaba, você nem sabe dizer exatamente o que sentiu. Parece um sonho. Ou melhor, um pesadelo bonito. Tudo começa bem cotidiano, né? Chihiro emburrada no banco de trás do carro, pais meio desligados… aí do nada: túnel esquisito, cidade abandonada, e puf, você tá num universo que funciona por regras próprias, com espíritos, deuses de banho, monstros gosmentos e um trem que atravessa a água. É uma mistura de conto de fadas japonês com delírio febril — mas de um jeito calmo, poético. Meio melancólico até.</p>
+                                <p>O mais doido é como as coisas são apresentadas: ninguém te explica nada. Os personagens falam das coisas como se tudo fosse normal, e você vai só aceitando. Tipo o Sem Rosto — ele aparece, é esquisitíssimo, e de repente tá engolindo gente. E ainda assim, a gente sente pena dele. O filme é cheio dessas criaturas bizarras que, de algum jeito, são muito humanas.</p>
+                              </div>
+                            </article>
+                        </div>
+                    </div>
+        
+                    <div id="sub-jogos" class="subtab-pane">
+                        <h2>Jogos</h2>
+                        <div class="twitch-container">
+                            <a href="https://www.twitch.tv/pinguimmaligno" target="_blank" class="twitch-link">
+                                <img src="img/logo twitch.png" alt="Twitch Logo" class="twitch-logo">
+                                <span>Assista minhas lives na Twitch</span>
+                            </a>
+                        </div>
+                        <div class="jogos-terminados">
+                            <h3>🏆 Jogos Terminados em live</h3>
+                            <div class="grid-terminados">
+                            <div class="jogo-terminado-item" title="Dark Souls 3"><img src="/img/jogo1-terminado.jpg" alt="Dark Souls 3" /><p>Dark Souls 3</p></div>
+                            <div class="jogo-terminado-item" title="Bloodborne"><img src="/img/jogo2-terminado.jpg" alt="Bloodborne" /><p>Bloodborne</p></div>
+                            <div class="jogo-terminado-item" title="Detroit Become Human"><img src="/img/jogo3-terminado.jpg" alt="Detroit Become Human" /><p>Detroit Become Human</p></div>
+                            <div class="jogo-terminado-item" title="Hollow Knight"><img src="/img/jogo4-terminado.jpg" alt="Hollow Knight" /><p>Hollow Knight</p></div>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div id="sub-livros" class="subtab-pane">
+                        <h2>Minhas Recomendações</h2>
+                        <div class="books-grid">
+                            <div class="book-card"><img src="/img/Livro1.jpg" alt="Romeu e Julieta" /><h3>Romeu e Julieta</h3></div>
+                            <div class="book-card"><img src="/img/Livro2.jpg" alt="Hamlet" /><h3>Hamlet</h3></div>
+                            <div class="book-card"><img src="/img/livro3.jpg" alt="Otelo" /><h3>Otelo</h3></div>
+                            <div class="book-card"><img src="/img/livro6.jpg" alt="Sherlock Holmes : Um Estudo em vermelho" /><h3>Sherlock Holmes : Um Estudo em vermelho</h3></div>
+                            <div class="book-card"><img src="https://m.media-amazon.com/images/I/619kzsBXy8L._UF1000,1000_QL80_.jpg" alt="Sherlock Holmes: O Cão Dos Baskervilles" /><h3>Sherlock Holmes: O Cão Dos Baskervilles</h3></div>
+                            <div class="book-card"><img src="https://m.media-amazon.com/images/I/61be7vluTaL.jpg" alt="Sherlock Holmes: O Signo Dos Quatros" /><h3>Sherlock Holmes: O Signo Dos Quatros</h3></div>
+                            <div class="book-card"><img src="https://m.media-amazon.com/images/I/71VQR8rTBXL._AC_UF1000,1000_QL80_DpWeblab_.jpg" alt="Santo Agostinho: Confissões" /><h3>Santo Agostinho: Confissões</h3></div>
+                            <div class="book-card"><img src="https://m.media-amazon.com/images/I/71FvmGwhFXL.jpg" alt="Santo Agostinho: Cidade De Deus" /><h3>Santo Agostinho: Cidade De Deus</h3></div>
+                            <div class="book-card"><img src="https://m.media-amazon.com/images/I/91FMPAzh5AL._AC_UF1000,1000_QL80_.jpg" alt="Tomás De Kempis: Imitação de Cristo" /><h3>Tomás De Kempis: Imitação de Cristo</h3></div>
+                            <div class="book-card"><img src="https://m.media-amazon.com/images/I/61r-3VfJbRL._AC_UF1000,1000_QL80_.jpg" alt="Friedrich Nietzsche: O Anticristo" /><h3>Friedrich Nietzsche: O Anticristo</h3></div>
+                            <div class="book-card"><img src="https://m.media-amazon.com/images/I/81gfDnn7qgL._AC_UF1000,1000_QL80_.jpg" alt="Sigmund Freud: A interpretação Dos Sonhos" /><h3>Sigmund Freud: A interpretação Dos Sonhos</h3></div>
+                            <div class="book-card"><img src="https://m.media-amazon.com/images/I/81TNzkUcNzL.jpg" alt="Séneca: Sobre A Brevidade Da Vida" /><h3>Séneca: Sobre A Brevidade Da Vida</h3></div>
+                            <div class="book-card"><img src="https://m.media-amazon.com/images/I/21zoOEArgTL._AC_UF1000,1000_QL80_.jpg" alt="Jean Paul Sartre: O Ser e o Nada" /><h3>Jean Paul Sartre: O Ser e o Nada</h3></div>
+                            <div class="book-card"><img src="https://m.media-amazon.com/images/I/41Bqlqzr-IL._SY466_.jpg" alt="Plotino : As Enéadas" /><h3>Plotino : As Enéadas</h3></div>
+                            <div class="book-card"><img src="https://m.media-amazon.com/images/I/51bNY09w--L.jpg" alt="Lao Tsé: Tao Te Ching" /><h3>Lao Tsé: Tao Te Ching</h3></div>
+                            <div class="book-card"><img src="https://m.media-amazon.com/images/I/61XFqlHX+rL._AC_UF1000,1000_QL80_.jpg" alt="Dogen:Shōbōgenzō" /><h3>Dogen:Shōbōgenzō</h3></div>
+                            <div class="book-card"><img src="https://m.media-amazon.com/images/I/61FHvMia1bL._AC_UF1000,1000_QL80_.jpg" alt="Heráclito : Fragmentos Contextualizados" /><h3>Heráclito : Fragmentos Contextualizados</h3></div>
+                            <div class="book-card"><img src="https://m.media-amazon.com/images/I/612B0id4gNL._AC_UF1000,1000_QL80_.jpg" alt="Marco Aurelio : Meditações" /><h3>Marco Aurelio : Meditações</h3></div>
+                        </div>
+                    </div>
+        
+                    <div id="sub-links" class="subtab-pane">
+                        <h2>Links</h2>
+                        <div class="links-container-detailed">
+                            <a href="https://instagram.com/seu-usuario" target="_blank" class="link-card">
+                                <i class="ri-instagram-line"></i>
+                                <div class="link-content"><strong>Instagram</strong><p>Aqui é onde posto minhas melhores fotos, momentos do dia a dia e stories. Me segue lá!</p></div>
+                                <i class="ri-arrow-right-s-line arrow-icon"></i>
+                            </a>
+                            <a href="https://facebook.com/seu-usuario" target="_blank" class="link-card">
+                                <i class="ri-facebook-box-line"></i>
+                                <div class="link-content"><strong>Facebook</strong><p>Para atualizações mais longas, compartilhamento de artigos e para manter contato com amigos e família.</p></div>
+                                <i class="ri-arrow-right-s-line arrow-icon"></i>
+                            </a>
+                            <a href="https://open.spotify.com/user/seu-usuario" target="_blank" class="link-card">
+                                <i class="ri-spotify-line"></i>
+                                <div class="link-content"><strong>Spotify</strong><p>Acompanhe o que estou ouvindo! Minhas playlists estão sempre atualizadas com o que inspira meu dia.</p></div>
+                                <i class="ri-arrow-right-s-line arrow-icon"></i>
+                            </a>
+                            <a href="https://vsco.co/seu-usuario" target="_blank" class="link-card">
+                                <i class="ri-camera-lens-line"></i>
+                                <div class="link-content"><strong>VSCO</strong><p>Meu espaço para fotografia mais conceitual e edições que gosto. Um feed mais experimental.</p></div>
+                                <i class="ri-arrow-right-s-line arrow-icon"></i>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
-
-            <div class="apostas-grid">
-                
-                <div class="aposta-card">
-                    <div class="aposta-header">
-                        🏆 Brasileirão 2025 • 15/05/2025
-                    </div>
-                    <div class="teams-container">
-                        <div class="team">
-                            <img src="https://logoeps.com/wp-content/uploads/2013/03/flamengo-vector-logo.png" alt="Flamengo" class="team-logo">
-                            <div class="team-name">Flamengo</div>
-                        </div>
-                        <div class="vs-divider">VS</div>
-                        <div class="team">
-                            <img src="https://logoeps.com/wp-content/uploads/2013/03/palmeiras-vector-logo.png" alt="Palmeiras" class="team-logo">
-                            <div class="team-name">Palmeiras</div>
-                        </div>
-                    </div>
-                    <div class="aposta-info">
-                        <div class="mercado">🎯 Mais de 2.5 gols</div>
-                        <div class="aposta-details">
-                            <div class="detail-item">
-                                <div class="detail-label">Stake</div>
-                                <div class="detail-value">R$ 100</div>
-                            </div>
-                            <div class="detail-item">
-                                <div class="detail-label">Odd</div>
-                                <div class="detail-value">2.40</div>
-                            </div>
-                        </div>
-                        <div class="status-badge status-ganhou">✅ GANHOU • +R$240</div>
-                    </div>
+        </section>
+    
+        <section id="estudos" class="tab-content">
+            <h2>Estudos</h2>
+            <div class="estudos-container">
+                <p class="estudos-intro">Aqui compartilho reflexões, leituras e aprendizados que venho explorando, desde filosofia até temas bíblicos.</p>
+                <div class="study-card">
+                  <img src="/img/Estudo1.png" alt="Monoteísmo em Israel">
+                  <div class="study-info">
+                    <h3>Transição do Politeísmo para o Monoteísmo</h3>
+                    <p>Uma análise sobre a evolução do conceito de Deus em Israel, com base em textos antigos e achados arqueológicos.</p>
+                    <a href="https://www.notion.so/Unus-Ex-Pluribus-1fe88ee6c5da8066b5a7d6ee47048fe7?pvs=4" class="study-button" target="_blank">Ver estudo</a>
+                  </div>
                 </div>
-
-                <div class="aposta-card">
-                    <div class="aposta-header">
-                        <img src="https://static.flashscore.com/res/image/data/E5CE5MB7-hlgaOPoR.png" alt="Logo" class="header-logo">
-                       2 Bundesliga • 27/05/2025
-                    </div>
-                    <div class="teams-container">
-                        <div class="team">
-                            <img src="https://static.flashscore.com/res/image/data/jTPygLBr-rBP4Wuhs.png" alt="Braunscheweig" class="team-logo">
-                            <div class="team-name">Braunscheweig</div>
-                        </div>
-                        <div class="vs-divider">VS</div>
-                        <div class="team">
-                            <img src="https://static.flashscore.com/res/image/data/O6Ew3GBr-rcKPySRa.png" alt="Saarbrucken" class="team-logo">
-                            <div class="team-name">Saarbrucken</div>
-                        </div>
-                    </div>
-                    <div class="aposta-info">
-                        <div class="mercado">🎯 Gol No Primeiro Tempo</div>
-                        <div class="aposta-details">
-                            <div class="detail-item">
-                                <div class="detail-label">Stake</div>
-                                <div class="detail-value">R$ 48</div>
-                            </div>
-                            <div class="detail-item">
-                                <div class="detail-label">Odd</div>
-                                <div class="detail-value">1.31</div>
-                            </div>
-                        </div>
-                        <div class="status-badge status-ganhou">✅ GANHOU • +R$14,88</div>
-                    </div>
+                <div class="study-card">
+                  <img src="/img/Estudo2.png" alt="Comentário em João 1">
+                  <div class="study-info">
+                    <h3>Comentário em João 1</h3>
+                    <p>Exploração da simbologia do "Verbo" e a ligação entre o texto bíblico e a filosofia helenística.</p>
+                    <a href="https://www.notion.so/Explora-o-da-Simbologia-do-Verbo-Logos-e-sua-Liga-o-entre-o-Texto-B-blico-e-a-Filosofia-Helen--1fe88ee6c5da8036a826d362915af43a?pvs=4" class="study-button" target="_blank">Ver estudo</a>
+                  </div>
                 </div>
-
-                <div class="aposta-card">
-                                   <div class="aposta-header">
-    <img src="https://images.seeklogo.com/logo-png/27/1/counter-strike-global-offensive-logo-png_seeklogo-273411.png" alt="Logo" class="header-logo">
-    Galaxy Battle 2025 • 27/05/2025
-</div>
-                    <div class="teams-container">
-                        <div class="team">
-                            <img src="https://img-cdn.hltv.org/teamlogo/OgMRQA35hopXA8kDwMFHIY.svg?ixlib=java-2.1.0&s=ec7bc44165c7acf4224a22a1338ab7d7" alt="Real Madrid" class="team-logo">
-                            <div class="team-name">BIG</div>
-                        </div>
-                        <div class="vs-divider">VS</div>
-                        <div class="team">
-                            <img src="https://img-cdn.hltv.org/teamlogo/gzn14uIQ6ENslja9hMqnkj.png?ixlib=java-2.1.0&w=200&s=c1c65a7f49ed32f9b1a8e73f36bbc955" alt="Barcelona" class="team-logo">
-                            <div class="team-name">Cybershoke</div>
-                        </div>
-                    </div>
-                    <div class="aposta-info">
-                        <div class="mercado">🎯 Vitória Cybershoke </div>
-                        <div class="aposta-details">
-                            <div class="detail-item">
-                                <div class="detail-label">Stake</div>
-                                <div class="detail-value">R$ 32</div>
-                            </div>
-                            <div class="detail-item">
-                                <div class="detail-label">Odd</div>
-                                <div class="detail-value">1.51</div>
-                            </div>
-                        </div>
-                        <div class="status-badge status-ganhou">✅ GANHOU • +R$16,32</div>
-                    </div>
-   </div>
-                <div class="aposta-card">
-                    <div class="aposta-header">
-    <img src="https://wallpapercat.com/w/full/c/b/1/902700-3840x2160-desktop-4k-league-of-legends-logo-background.jpg"" alt="Logo" class="header-logo">
-    Hitpoint Masters • 27/05/2025
-</div>
-                    <div class="teams-container">
-                        <div class="team">
-                            <img src="https://am-a.akamaihd.net/image?resize=36:&f=http%3A%2F%2Fstatic.lolesports.com%2Fteams%2F1642690673730_HM_EIQ_logo_1_1_use_this.png" alt="Juventus" class="team-logo">
-                            <div class="team-name">Entropiq</div>
-                        </div>
-                        <div class="vs-divider">VS</div>
-                        <div class="team">
-                            <img src="https://am-a.akamaihd.net/image?resize=36:&f=http%3A%2F%2Fstatic.lolesports.com%2Fteams%2F1705300013762_HM_ESB_logo.png" alt="Milan" class="team-logo">
-                            <div class="team-name">Esuba</div>
-                        </div>
-                    </div>
-                    <div class="aposta-info">
-                        <div class="mercado">🎯 Vitória Esuba</div>
-                        <div class="aposta-details">
-                            <div class="detail-item">
-                                <div class="detail-label">Stake</div>
-                                <div class="detail-value">R$ 20</div>
-                            </div>
-                            <div class="detail-item">
-                                <div class="detail-label">Odd</div>
-                                <div class="detail-value">1.60</div>
-                            </div>
-                        </div>
-                        <div class="status-badge status-ganhou">✅ GANHOU • +R$12,00</div>
-                    </div>
-                </div>
-
             </div>
-        </div>
-    </section>
+        </section>
+    
+        <section id="criacao" class="tab-content">
+            <div class="creation-container">
+                <h2>O Grande Acaso</h2>
+                <p>A existência do universo é um evento de probabilidade incalculável. Você está prestes a tentar o impossível. Clique no botão abaixo para ver se as condições cósmicas se alinham para a criação.</p>
+                <button id="creation-button">Tentar Criar o Universo</button>
+                <div id="creation-status"></div>
+                <div id="creation-result-wrapper">
+                    <div id="creation-result"></div>
+                </div>
+            </div>
+        </section>
+    </div><aside class="right-sidebar-widget">
+        <h3>No Momento</h3>
 
-  </main>
+        <div class="widget-card">
+    <img src="https://m.media-amazon.com/images/I/81KHmxTwNTS._SL1500_.jpg" alt="Capa do livro Manual de Epicteto" class="widget-thumbnail">
+    
+    <div class="widget-content">
+        <h4>Lendo Agora</h4>
+        <p>Manual de Epicteto</p>
+    </div>
+</div>
 
+     <div class="widget-card">
+    <img src="https://tse1.explicit.bing.net/th/id/OIP.U7cfxrATTibqTZF3mcoHTAHaIa?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Capa do livro Manual de Epicteto" class="widget-thumbnail">
+    
+    <div class="widget-content">
+        <h4>Jogando Atualmente</h4>
+        <p>Assassin's Creed Odyssey</p>
+    </div>
+</div>
+
+   <div class="widget-card">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0NMmu_n-hSnGZBKs066ztfZYUupowlt3nAA&s" alt="Capa do livro Manual de Epicteto" class="widget-thumbnail">
+    
+    <div class="widget-content">
+        <h4>Ultimo Filme Assistido</h4>
+        <p>Gato De Botas 2</p>
+    </div>
+</div>
+
+   <div class="widget-card">
+    <img src="https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p9260096_b_v13_ac.jpg" alt="Capa do livro Manual de Epicteto" class="widget-thumbnail">
+    
+    <div class="widget-content">
+        <h4>Serie que estou assistindo
+        </h4>
+        <p>Elementary</p>
+    </div>
+</div>
+
+    </aside></main>
+  
   <script src="script.js"></script>
 </body>
 </html>

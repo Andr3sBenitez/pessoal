@@ -1,4 +1,5 @@
 window.addEventListener('load', () => {
+  // Lógica para as abas principais
   const tabs = document.querySelectorAll('.tab-link');
   const contents = document.querySelectorAll('.tab-content');
 
@@ -7,7 +8,7 @@ window.addEventListener('load', () => {
       e.preventDefault();
       const target = tab.getAttribute('data-tab');
 
-      // Remove active de todas abas e conteúdos
+      // Remove active de todas as abas e conteúdos principais
       tabs.forEach(t => t.classList.remove('active'));
       contents.forEach(c => c.classList.remove('active'));
 
@@ -17,56 +18,92 @@ window.addEventListener('load', () => {
     });
   });
 
-  // Inicializa mostrando só a primeira aba
-  if (tabs.length > 0) {
-    tabs[0].classList.add('active');
-    contents[0].classList.add('active');
-  }
+  // Lógica para a sub-navegação dentro da aba "Apresentação"
+  const subNavLinks = document.querySelectorAll('.subnav-link');
+  const subTabPanes = document.querySelectorAll('.subtab-pane');
+
+  subNavLinks.forEach(link => {
+    link.addEventListener('click', e => {
+      e.preventDefault();
+      const targetId = link.getAttribute('data-subtab');
+
+      // Remove a classe 'active' de todos os links e painéis da sub-navegação
+      subNavLinks.forEach(l => l.classList.remove('active'));
+      subTabPanes.forEach(p => p.classList.remove('active'));
+
+      // Adiciona a classe 'active' ao link clicado e ao painel correspondente
+      link.classList.add('active');
+      document.getElementById(targetId).classList.add('active');
+    });
+  });
+
+  // Lógica para os links dos Destaques
+  const highlightLinks = document.querySelectorAll('.highlight-card');
+
+  highlightLinks.forEach(link => {
+    link.addEventListener('click', e => {
+      e.preventDefault();
+
+      const mainTabId = link.getAttribute('data-main-tab');
+      const subTabId = link.getAttribute('data-sub-tab');
+
+      // Ativa a aba principal correta
+      const mainTabLink = document.querySelector(`.tab-link[data-tab="${mainTabId}"]`);
+      if (mainTabLink) {
+        mainTabLink.click();
+      }
+
+      // Se houver uma sub-aba, ativa ela também
+      if (subTabId) {
+        // Usamos um pequeno timeout para garantir que o painel principal já esteja visível
+        setTimeout(() => {
+          const subTabLink = document.querySelector(`.subnav-link[data-subtab="${subTabId}"]`);
+          if (subTabLink) {
+            subTabLink.click();
+          }
+        }, 50);
+      }
+    });
+  });
   
   // Lógica para a aba "Criação"
   const creationButton = document.getElementById('creation-button');
   const creationResult = document.getElementById('creation-result');
   const creationStatus = document.getElementById('creation-status');
   
-  // A chance extremamente pequena de o universo ser criado (1 em 1 milhão)
   const CHANCE_OF_CREATION = 0.000001;
   let attemptCount = 0;
 
   if (creationButton) {
     creationButton.addEventListener('click', () => {
-        // Desativa o botão e limpa o estado anterior
         creationButton.disabled = true;
         creationResult.innerHTML = '';
         creationResult.className = '';
         creationStatus.textContent = 'Criando as condições cósmicas...';
 
-        // Define um tempo de espera para criar suspense
         setTimeout(() => {
-            // Limpa a mensagem de status
             creationStatus.textContent = '';
-            
-            // Incrementa o contador de tentativas
             attemptCount++;
 
             const randomNumber = Math.random();
             const isSuccess = randomNumber < CHANCE_OF_CREATION;
 
-            // Define a mensagem de resultado
-            creationResult.textContent = isSuccess ? 'Parabéns seu universo foi criado' : 'Infelizmente o universo não foi criado';
-            
-            // Adiciona a classe de estilo (sucesso ou falha)
+            creationResult.textContent = isSuccess ? 'Parabéns! Seu universo foi criado.' : 'Infelizmente, o universo não foi criado.';
             creationResult.classList.add(isSuccess ? 'success-message' : 'failure-message');
 
-            // Adiciona a classe de animação com base na contagem de tentativas
             if (attemptCount === 1) {
                 creationResult.classList.add('typing-effect');
             } else {
                 creationResult.classList.add('reveal-effect');
             }
+            
+            // Remove a animação de digitação após ela terminar para não interferir no reveal
+            creationResult.addEventListener('animationend', () => {
+                creationResult.classList.remove('typing-effect');
+            }, { once: true });
 
-            // Reativa o botão
             creationButton.disabled = false;
-        }, 3000); // 3 segundos de espera
+        }, 2500);
     });
   }
 });
