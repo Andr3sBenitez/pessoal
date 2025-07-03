@@ -19,6 +19,7 @@
         <li><a href="#" class="tab-link active" data-tab="apresentacao"><i class="ri-user-3-line"></i><span>Apresentação</span></a></li>
         <li><a href="#" class="tab-link" data-tab="estudos"><i class="ri-lightbulb-flash-line"></i><span>Estudos</span></a></li>
         <li><a href="#" class="tab-link" data-tab="criacao"><i class="ri-earth-line"></i><span>Criação</span></a></li>
+        <li><a href="#" class="tab-link" data-tab="codigos"><i class="ri-lock-line"></i><span>Códigos</span></a></li>
       </ul>
     </nav>
 
@@ -234,6 +235,44 @@
                 </div>
             </div>
         </section>
+
+        <section id="codigos" class="tab-content">
+            <div class="codes-container">
+                <h2>Códigos Secretos</h2>
+                <p>Desvende os mistérios! Digite um código secreto para revelar conteúdo oculto.</p>
+                <div class="code-input-area">
+                    <input type="text" id="secret-code-input" placeholder="Digite seu código secreto aqui..." />
+                    <button id="submit-code-button">Desvendar</button>
+                </div>
+                <div id="code-message" class="code-message"></div>
+
+                <div id="secret-page-batman" class="secret-page-content" style="display: none;">
+                    <h3>Bem-vindo à Batcaverna!</h3>
+                    <p>Você encontrou a página secreta do Batman. Shhh... é um segredo!</p>
+                    <img src="https://i.pinimg.com/736x/87/40/a4/8740a42426210f4492723c14a2a17684.jpg" alt="Batman" style="max-width: 100%; height: auto; border-radius: 8px;">
+                </div>
+
+                <div id="secret-page-penguin" class="secret-page-content" style="display: none;">
+                    <h3>Pinguim? Apenas para os mais elegantes...</h3>
+                    <p>Oswald Cobblepot o saúda! Parece que você descobriu um dos meus esconderijos.</p>
+                    <img src="https://i.pinimg.com/originals/80/5e/52/805e52331505c102a5edcfd91a998188.jpg" alt="Pinguim" style="max-width: 100%; height: auto; border-radius: 8px;">
+                </div>
+
+                <div id="secret-page-shakespeare" class="secret-page-content" style="display: none;">
+                    <h3>"Ser, ou não ser, eis a questão..."</h3>
+                    <p>Uma página dedicada ao Bardo. Que sua sabedoria ilumine seu caminho.</p>
+                    <img src="https://www.pensador.com/img/imagens_frases_de_william_shakespeare.jpg" alt="Shakespeare" style="max-width: 100%; height: auto; border-radius: 8px;">
+                </div>
+
+           <div id="secret-page-games" class="secret-page-content" style="display: none;">
+    <h3>Parabéns! Você desbloqueou um jogo!</h3>
+    <p>Sua perícia com os códigos foi recompensada. Aproveite este jogo especial!</p>
+    <img src="https://cdn.cdkeys.com/media/catalog/product/n/e/new_project_-_2023-09-04t163108.181.jpg" alt="Game Cover" style="max-width: 100%; height: auto; border-radius: 8px; margin-bottom: 10px;">
+    <a href="https://example.com/seu-jogo-aqui.zip" target="_blank" class="download-button">Baixe Aqui</a>
+</div>
+            </div>
+        </section>
+
     </div></main>
   
   <script src="script.js"></script>

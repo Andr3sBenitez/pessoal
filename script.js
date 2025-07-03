@@ -106,4 +106,41 @@ window.addEventListener('load', () => {
         }, 2500);
     });
   }
+
+  // NEW: Lógica para a aba "Códigos"
+  const secretCodeInput = document.getElementById('secret-code-input');
+  const submitCodeButton = document.getElementById('submit-code-button');
+  const codeMessage = document.getElementById('code-message');
+  const secretPages = document.querySelectorAll('.secret-page-content'); // Get all secret pages
+
+  // Define your secret codes and their corresponding page IDs
+  const secretCodes = {
+    'batman': 'secret-page-batman',
+    'pinguim': 'secret-page-penguin',
+    'shakespeare': 'secret-page-shakespeare',
+    '19972025': 'secret-page-games' // NEW: Add 'jogos' code
+  };
+
+  if (submitCodeButton) {
+    submitCodeButton.addEventListener('click', () => {
+      const enteredCode = secretCodeInput.value.toLowerCase().trim(); // Get and clean input
+
+      // Hide all secret pages first
+      secretPages.forEach(page => {
+        page.style.display = 'none';
+      });
+
+      if (secretCodes[enteredCode]) {
+        // If the code exists, show the corresponding page
+        document.getElementById(secretCodes[enteredCode]).style.display = 'block';
+        codeMessage.textContent = 'Código correto! Página desbloqueada.';
+        codeMessage.className = 'code-message success-message';
+      } else {
+        // If the code is incorrect
+        codeMessage.textContent = 'Código inválido. Tente novamente.';
+        codeMessage.className = 'code-message failure-message';
+      }
+      secretCodeInput.value = ''; // Clear the input field
+    });
+  }
 });
