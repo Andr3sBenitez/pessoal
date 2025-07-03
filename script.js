@@ -118,7 +118,7 @@ window.addEventListener('load', () => {
     'batman': 'secret-page-batman',
     'pinguim': 'secret-page-penguin',
     'shakespeare': 'secret-page-shakespeare',
-    '19972025': 'secret-page-games' // NEW: Add 'jogos' code
+    'AKTX87454S': 'secret-page-games' // NEW: Add 'jogos' code
   };
 
   if (submitCodeButton) {
