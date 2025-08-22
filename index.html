@@ -17,6 +17,9 @@
     <nav>
       <ul class="tabs">
         <li><a href="#" class="tab-link active" data-tab="apresentacao"><i class="ri-user-3-line"></i><span>Apresentação</span></a></li>
+        <li><a href="#" class="tab-link" data-tab="filmes"><i class="ri-film-line"></i><span>Filmes</span></a></li>
+        <li><a href="#" class="tab-link" data-tab="jogos"><i class="ri-gamepad-line"></i><span>Jogos</span></a></li>
+        <li><a href="#" class="tab-link" data-tab="livros"><i class="ri-book-open-line"></i><span>Livros</span></a></li>
         <li><a href="#" class="tab-link" data-tab="estudos"><i class="ri-lightbulb-flash-line"></i><span>Estudos</span></a></li>
         <li><a href="#" class="tab-link" data-tab="criacao"><i class="ri-earth-line"></i><span>Criação</span></a></li>
         <li><a href="#" class="tab-link" data-tab="codigos"><i class="ri-lock-line"></i><span>Códigos</span></a></li>
@@ -57,148 +60,131 @@
   <main>
     <div class="main-content-column">
         <section id="apresentacao" class="tab-content active">
-            <div class="presentation-wrapper">
-                <aside class="presentation-sidebar icon-only">
-                    <nav>
-                        <ul>
-                            <li><a href="#" class="subnav-link active" data-subtab="sub-sobre" title="Sobre"><i class="ri-user-3-line"></i></a></li>
-                            <li><a href="#" class="subnav-link" data-subtab="sub-filmes" title="Filmes"><i class="ri-film-line"></i></a></li>
-                            <li><a href="#" class="subnav-link" data-subtab="sub-jogos" title="Jogos"><i class="ri-gamepad-line"></i></a></li>
-                            <li><a href="#" class="subnav-link" data-subtab="sub-livros" title="Livros"><i class="ri-book-open-line"></i></a></li>
-                            
-                        </ul>
-                    </nav>
-                </aside>
-        
-                <div class="presentation-content-area">
-                    <div id="sub-sobre" class="subtab-pane active">
-                        <div class="presentation-container">
-                            <img src="/img/perfil.jpg" alt="Foto de Apresentação" />
-                            <div class="presentation-text">
-                                <h1>Olá, eu sou Andres</h1>
-                                <p>Sou apaixonado por cinema, jogos e livros. Este site é um espaço para compartilhar minhas paixões e interesses. Aqui você encontrará minhas recomendações, análises e muito mais. Seja bem-vindo!</p>
-                                <div class="badges-container">
-                                    <span class="badge">🐧 Pinguins</span> <span class="badge">🦇 Batman</span> <span class="badge">🎭 Shakespeare</span> <span class="badge">🎬 Cinema</span> <span class="badge">🎮 Jogos</span> <span class="badge">📚 Literatura</span>
-                                </div>
-                            </div>
-                        </div>
+            <div class="presentation-container">
+                <img src="/img/perfil.jpg" alt="Foto de Apresentação" />
+                <div class="presentation-text">
+                    <h1>Olá, eu sou Andres</h1>
+                    <p>Sou apaixonado por cinema, jogos e livros. Este site é um espaço para compartilhar minhas paixões e interesses. Aqui você encontrará minhas recomendações, análises e muito mais. Seja bem-vindo!</p>
+                    <div class="badges-container">
+                        <span class="badge">🐧 Pinguins</span> <span class="badge">🦇 Batman</span> <span class="badge">🎭 Shakespeare</span> <span class="badge">🎬 Cinema</span> <span class="badge">🎮 Jogos</span> <span class="badge">📚 Literatura</span>
+                    </div>
+                </div>
+            </div>
 
-                        <div class="highlights-section">
-                            <h4>Destaques do Site</h4>
-                            <div class="highlights-grid">
-                        
-                                <a href="#" class="highlight-card" data-main-tab="apresentacao" data-sub-tab="sub-filmes">
-                                    <i class="ri-film-line highlight-icon"></i>
-                                    <div class="highlight-content">
-                                        <h5>Críticas de Cinema</h5>
-                                        <p>Análises sobre obras que me marcaram.</p>
-                                        <span>Ver mais →</span>
-                                    </div>
-                                </a>
-                        
-                                <a href="#" class="highlight-card" data-main-tab="apresentacao" data-sub-tab="sub-livros">
-                                    <i class="ri-book-open-line highlight-icon"></i>
-                                    <div class="highlight-content">
-                                        <h5>Recomendações de Livros</h5>
-                                        <p>Uma coleção de leituras essenciais.</p>
-                                        <span>Ver mais →</span>
-                                    </div>
-                                </a>
-                        
-                                <a href="#" class="highlight-card" data-main-tab="estudos" data-sub-tab="">
-                                    <i class="ri-lightbulb-flash-line highlight-icon"></i>
-                                    <div class="highlight-content">
-                                        <h5>Meus Estudos</h5>
-                                        <p>Reflexões sobre filosofia e outros temas.</p>
-                                        <span>Ver mais →</span>
-                                    </div>
-                                </a>
-                        
-                            </div>
+            <div class="highlights-section">
+                <h4>Destaques do Site</h4>
+                <div class="highlights-grid">
+            
+                    <a href="#" class="highlight-card" data-main-tab="filmes">
+                        <i class="ri-film-line highlight-icon"></i>
+                        <div class="highlight-content">
+                            <h5>Críticas de Cinema</h5>
+                            <p>Análises sobre obras que me marcaram.</p>
+                            <span>Ver mais →</span>
                         </div>
-                    </div>
-        
-                    <div id="sub-filmes" class="subtab-pane">
-                        <h2>Filmes</h2>
-                        <div class="movies-container">
-                            <article class="movie-card">
-                              <img src="/img/filme1.jpg" alt="Penguin's Memory" />
-                              <div class="movie-info">
-                                <h3>Penguin's Memory</h3>
-                                <p>Sem dúvidas, Penguins Memory é um filme que toca fundo na alma. O personagem principal, Mike, retorna de uma guerra marcada por traumas invisíveis e encontra seu lar irreconhecível — um lugar que não mais reflete quem ele se tornou. Perdido entre o passado que o aprisiona e o futuro que deseja, ele decide partir em busca dos seus sonhos, na esperança de reencontrar a si mesmo.</p>
-                                <p>No caminho, o amor surge como uma luz tênue, oferecendo conforto e uma nova razão para seguir. Mas Penguins Memory não se limita a um romance; é uma jornada sobre identidade, perda e a eterna luta interna para se reconstruir após o caos. O filme usa com maestria elementos simbólicos e uma narrativa delicada para mostrar como o passado pode assombrar, mas também como o afeto pode ajudar a curar.</p>
-                              </div>
-                            </article>
-                            <article class="movie-card">
-                              <img src="/img/filme2.jpg" alt="Dias Perfeitos" />
-                              <div class="movie-info">
-                                <h3>Dias Perfeitos</h3>
-                                <p>Dias Perfeitos é um daqueles filmes que parecem simples, mas dizem muito. A história acompanha alguém que leva uma vida super básica — rotina, silêncio, nada grandioso — mas aos poucos a gente percebe que existe uma paz ali. Um tipo de felicidade que vem das coisas pequenas: a luz passando pelas árvores, uma música tocando no rádio, um sorriso trocado sem pressa.</p>
-                                <p>O filme mostra que não precisa de muito pra viver bem. Não tem grandes reviravoltas nem cenas explosivas — e é exatamente isso que torna tudo tão bonito. Ele faz a gente repensar a correria, o excesso, e mostra que às vezes só estar presente já é suficiente. No fim, Dias Perfeitos não é sobre mudar o mundo, mas sobre encontrar beleza no mundo como ele é. Calmo, imperfeito e, ainda assim, cheio de sentido.</p>
-                              </div>
-                            </article>
-                            <article class="movie-card">
-                              <img src="/img/filme3.jpg" alt="O Menino, A Toupeira, A Raposa E O Cavalo" />
-                              <div class="movie-info">
-                                <h3>O Menino, A Toupeira, A Raposa E O Cavalo</h3>
-                                <p>Cara, esse filme me pegou de um jeito meio inesperado. No começo, parece só mais uma história simples, mas tem uma doçura que fica grudada. O jeito que o menino se conecta com a topeira, esse bichinho meio estranho e meio fofinho, é aquela coisa que dá vontade de acreditar na simplicidade das coisas.</p>
-                                <p>Não tem aquela pressão de grandes acontecimentos ou drama pesado, sabe? É só uma vibe calma, que te faz prestar atenção no que importa: as pequenas amizades, os momentos que passam despercebidos, e até aquele silêncio confortável que a gente esquece que existe. E o menino, com toda sua inocência, meio que me lembrou da minha própria infância, quando tudo parecia mais mágico e cheio de possibilidades. No fim, o filme é tipo um respiro, um lembrete de que felicidade não precisa ser algo gigante — às vezes tá ali, nas coisas pequenas, na companhia inesperada de alguém diferente. Eu saí meio que mais leve depois de assistir. Vale a pena.</p>
-                              </div>
-                              </article>
-                            <article class="movie-card">
-                              <img src="/img/filme4.jpg" alt="A Viagem de Chihiro" />
-                              <div class="movie-info">
-                                <h3>A Viagem de Chihiro</h3>
-                                <p>A Viagem de Chihiro é aquele tipo de filme que parece simples quando você começa, mas vai te puxando pra um mundo tão estranho, bonito e desconcertante que quando acaba, você nem sabe dizer exatamente o que sentiu. Parece um sonho. Ou melhor, um pesadelo bonito. Tudo começa bem cotidiano, né? Chihiro emburrada no banco de trás do carro, pais meio desligados… aí do nada: túnel esquisito, cidade abandonada, e puf, você tá num universo que funciona por regras próprias, com espíritos, deuses de banho, monstros gosmentos e um trem que atravessa a água. É uma mistura de conto de fadas japonês com delírio febril — mas de um jeito calmo, poético. Meio melancólico até.</p>
-                                <p>O mais doido é como as coisas são apresentadas: ninguém te explica nada. Os personagens falam das coisas como se tudo fosse normal, e você vai só aceitando. Tipo o Sem Rosto — ele aparece, é esquisitíssimo, e de repente tá engolindo gente. E ainda assim, a gente sente pena dele. O filme é cheio dessas criaturas bizarras que, de algum jeito, são muito humanas.</p>
-                              </div>
-                            </article>
+                    </a>
+            
+                    <a href="#" class="highlight-card" data-main-tab="livros">
+                        <i class="ri-book-open-line highlight-icon"></i>
+                        <div class="highlight-content">
+                            <h5>Recomendações de Livros</h5>
+                            <p>Uma coleção de leituras essenciais.</p>
+                            <span>Ver mais →</span>
                         </div>
-                    </div>
-        
-                    <div id="sub-jogos" class="subtab-pane">
-                        <h2>Jogos</h2>
-                        <div class="twitch-container">
-                            <a href="https://www.twitch.tv/pinguimmaligno" target="_blank" class="twitch-link">
-                                <img src="img/logo twitch.png" alt="Twitch Logo" class="twitch-logo">
-                                <span>Assista minhas lives na Twitch</span>
-                            </a>
+                    </a>
+            
+                    <a href="#" class="highlight-card" data-main-tab="estudos">
+                        <i class="ri-lightbulb-flash-line highlight-icon"></i>
+                        <div class="highlight-content">
+                            <h5>Meus Estudos</h5>
+                            <p>Reflexões sobre filosofia e outros temas.</p>
+                            <span>Ver mais →</span>
                         </div>
-                        <div class="jogos-terminados">
-                            <h3>🏆 Jogos Terminados em live</h3>
-                            <div class="grid-terminados">
-                            <div class="jogo-terminado-item" title="Dark Souls 3"><img src="/img/jogo1-terminado.jpg" alt="Dark Souls 3" /><p>Dark Souls 3</p></div>
-                            <div class="jogo-terminado-item" title="Bloodborne"><img src="/img/jogo2-terminado.jpg" alt="Bloodborne" /><p>Bloodborne</p></div>
-                            <div class="jogo-terminado-item" title="Detroit Become Human"><img src="/img/jogo3-terminado.jpg" alt="Detroit Become Human" /><p>Detroit Become Human</p></div>
-                            <div class="jogo-terminado-item" title="Hollow Knight"><img src="/img/jogo4-terminado.jpg" alt="Hollow Knight" /><p>Hollow Knight</p></div>
-                            </div>
-                        </div>
-                    </div>
-        
-                    <div id="sub-livros" class="subtab-pane">
-                        <h2>Minhas Recomendações</h2>
-                        <div class="books-grid">
-                            <div class="book-card"><img src="/img/Livro1.jpg" alt="Romeu e Julieta" /><h3>Romeu e Julieta</h3></div>
-                            <div class="book-card"><img src="/img/Livro2.jpg" alt="Hamlet" /><h3>Hamlet</h3></div>
-                            <div class="book-card"><img src="/img/livro3.jpg" alt="Otelo" /><h3>Otelo</h3></div>
-                            <div class="book-card"><img src="/img/livro6.jpg" alt="Sherlock Holmes : Um Estudo em vermelho" /><h3>Sherlock Holmes : Um Estudo em vermelho</h3></div>
-                            <div class="book-card"><img src="https://m.media-amazon.com/images/I/619kzsBXy8L._UF1000,1000_QL80_.jpg" alt="Sherlock Holmes: O Cão Dos Baskervilles" /><h3>Sherlock Holmes: O Cão Dos Baskervilles</h3></div>
-                            <div class="book-card"><img src="https://m.media-amazon.com/images/I/61be7vluTaL._UF1000,1000_QL80_.jpg" alt="Sherlock Holmes: O Signo Dos Quatros" /><h3>Sherlock Holmes: O Signo Dos Quatros</h3></div>
-                            <div class="book-card"><img src="https://m.media-amazon.com/images/I/71VQR8rTBXL._AC_UF1000,1000_QL80_DpWeblab_.jpg" alt="Santo Agostinho: Confissões" /><h3>Santo Agostinho: Confissões</h3></div>
-                            <div class="book-card"><img src="https://m.media-amazon.com/images/I/71FvmGwhFXL.jpg" alt="Santo Agostinho: Cidade De Deus" /><h3>Santo Agostinho: Cidade De Deus</h3></div>
-                            <div class="book-card"><img src="https://checkout.loyola.com.br/resizer/view/false/false/true/false/5679.jpg" alt="Tomás De Kempis: Imitação de Cristo" /><h3>Tomás De Kempis: Imitação de Cristo</h3></div>
-                            <div class="book-card"><img src="https://m.media-amazon.com/images/I/61r-3VfJbRL._AC_UF1000,1000_QL80_.jpg" alt="Friedrich Nietzsche: O Anticristo" /><h3>Friedrich Nietzsche: O Anticristo</h3></div>
-                            <div class="book-card"><img src="https://m.media-amazon.com/images/I/81gfDnn7qgL._AC_UF1000,1000_QL80_.jpg" alt="Sigmund Freud: A interpretação Dos Sonhos" /><h3>Sigmund Freud: A interpretação Dos Sonhos</h3></div>
-                            <div class="book-card"><img src="https://m.media-amazon.com/images/I/81TNzkUcNzL.jpg" alt="Séneca: Sobre A Brevidade Da Vida" /><h3>Séneca: Sobre A Brevidade Da Vida</h3></div>
-                            <div class="book-card"><img src="https://m.media-amazon.com/images/I/21zoOEArgTL._AC_UF1000,1000_QL80_.jpg" alt="Jean Paul Sartre: O Ser e o Nada" /><h3>Jean Paul Sartre: O Ser e o Nada</h3></div>
-                            <div class="book-card"><img src="https://m.media-amazon.com/images/I/41Bqlqzr-IL._SY466_.jpg" alt="Plotino : As Enéadas" /><h3>Plotino : As Enéadas</h3></div>
-                            <div class="book-card"><img src="https://m.media-amazon.com/images/I/51bNY09w--L.jpg" alt="Lao Tsé: Tao Te Ching" /><h3>Lao Tsé: Tao Te Ching</h3></div>
-                            <div class="book-card"><img src="https://m.media-amazon.com/images/I/61XFqlHX+rL._AC_UF1000,1000_QL80_.jpg" alt="Dogen:Shōbōgenzō" /><h3>Dogen:Shōbōgenzō</h3></div>
-                            <div class="book-card"><img src="https://m.media-amazon.com/images/I/61FHvMia1bL._AC_UF1000,1000_QL80_.jpg" alt="Heráclito : Fragmentos Contextualizados" /><h3>Heráclito : Fragmentos Contextualizados</h3></div>
-                            <div class="book-card"><img src="https://m.media-amazon.com/images/I/612B0id4gNL._AC_UF1000,1000_QL80_.jpg" alt="Marco Aurelio : Meditações" /><h3>Marco Aurelio : Meditações</h3></div>
-                        </div>
-                    </div>
-        
+                    </a>
+            
+                </div>
+            </div>
+        </section>
+
+        <section id="filmes" class="tab-content">
+            <h2>Filmes</h2>
+            <div class="movies-container">
+                <article class="movie-card">
+                  <img src="/img/filme1.jpg" alt="Penguin's Memory" />
+                  <div class="movie-info">
+                    <h3>Penguin's Memory</h3>
+                    <p>Sem dúvidas, Penguins Memory é um filme que toca fundo na alma. O personagem principal, Mike, retorna de uma guerra marcada por traumas invisíveis e encontra seu lar irreconhecível — um lugar que não mais reflete quem ele se tornou. Perdido entre o passado que o aprisiona e o futuro que deseja, ele decide partir em busca dos seus sonhos, na esperança de reencontrar a si mesmo.</p>
+                    <p>No caminho, o amor surge como uma luz tênue, oferecendo conforto e uma nova razão para seguir. Mas Penguins Memory não se limita a um romance; é uma jornada sobre identidade, perda e a eterna luta interna para se reconstruir após o caos. O filme usa com maestria elementos simbólicos e uma narrativa delicada para mostrar como o passado pode assombrar, mas também como o afeto pode ajudar a curar.</p>
+                  </div>
+                </article>
+                <article class="movie-card">
+                  <img src="/img/filme2.jpg" alt="Dias Perfeitos" />
+                  <div class="movie-info">
+                    <h3>Dias Perfeitos</h3>
+                    <p>Dias Perfeitos é um daqueles filmes que parecem simples, mas dizem muito. A história acompanha alguém que leva uma vida super básica — rotina, silêncio, nada grandioso — mas aos poucos a gente percebe que existe uma paz ali. Um tipo de felicidade que vem das coisas pequenas: a luz passando pelas árvores, uma música tocando no rádio, um sorriso trocado sem pressa.</p>
+                    <p>O filme mostra que não precisa de muito pra viver bem. Não tem grandes reviravoltas nem cenas explosivas — e é exatamente isso que torna tudo tão bonito. Ele faz a gente repensar a correria, o excesso, e mostra que às vezes só estar presente já é suficiente. No fim, Dias Perfeitos não é sobre mudar o mundo, mas sobre encontrar beleza no mundo como ele é. Calmo, imperfeito e, ainda assim, cheio de sentido.</p>
+                  </div>
+                </article>
+                <article class="movie-card">
+                  <img src="/img/filme3.jpg" alt="O Menino, A Toupeira, A Raposa E O Cavalo" />
+                  <div class="movie-info">
+                    <h3>O Menino, A Toupeira, A Raposa E O Cavalo</h3>
+                    <p>Cara, esse filme me pegou de um jeito meio inesperado. No começo, parece só mais uma história simples, mas tem uma doçura que fica grudada. O jeito que o menino se conecta com a topeira, esse bichinho meio estranho e meio fofinho, é aquela coisa que dá vontade de acreditar na simplicidade das coisas.</p>
+                    <p>Não tem aquela pressão de grandes acontecimentos ou drama pesado, sabe? É só uma vibe calma, que te faz prestar atenção no que importa: as pequenas amizades, os momentos que passam despercebidos, e até aquele silêncio confortável que a gente esquece que existe. E o menino, com toda sua inocência, meio que me lembrou da minha própria infância, quando tudo parecia mais mágico e cheio de possibilidades. No fim, o filme é tipo um respiro, um lembrete de que felicidade não precisa ser algo gigante — às vezes tá ali, nas coisas pequenas, na companhia inesperada de alguém diferente. Eu saí meio que mais leve depois de assistir. Vale a pena.</p>
+                  </div>
+                  </article>
+                <article class="movie-card">
+                  <img src="/img/filme4.jpg" alt="A Viagem de Chihiro" />
+                  <div class="movie-info">
+                    <h3>A Viagem de Chihiro</h3>
+                    <p>A Viagem de Chihiro é aquele tipo de filme que parece simples quando você começa, mas vai te puxando pra um mundo tão estranho, bonito e desconcertante que quando acaba, você nem sabe dizer exatamente o que sentiu. Parece um sonho. Ou melhor, um pesadelo bonito. Tudo começa bem cotidiano, né? Chihiro emburrada no banco de trás do carro, pais meio desligados… aí do nada: túnel esquisito, cidade abandonada, e puf, você tá num universo que funciona por regras próprias, com espíritos, deuses de banho, monstros gosmentos e um trem que atravessa a água. É uma mistura de conto de fadas japonês com delírio febril — mas de um jeito calmo, poético. Meio melancólico até.</p>
+                    <p>O mais doido é como as coisas são apresentadas: ninguém te explica nada. Os personagens falam das coisas como se tudo fosse normal, e você vai só aceitando. Tipo o Sem Rosto — ele aparece, é esquisitíssimo, e de repente tá engolindo gente. E ainda assim, a gente sente pena dele. O filme é cheio dessas criaturas bizarras que, de algum jeito, são muito humanas.</p>
+                  </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="jogos" class="tab-content">
+            <h2>Jogos</h2>
+            <div class="twitch-container">
+                <a href="https://www.twitch.tv/pinguimmaligno" target="_blank" class="twitch-link">
+                    <img src="img/logo twitch.png" alt="Twitch Logo" class="twitch-logo">
+                    <span>Assista minhas lives na Twitch</span>
+                </a>
+            </div>
+            <div class="jogos-terminados">
+                <h3>🏆 Jogos Terminados em live</h3>
+                <div class="grid-terminados">
+                <div class="jogo-terminado-item" title="Dark Souls 3"><img src="/img/jogo1-terminado.jpg" alt="Dark Souls 3" /><p>Dark Souls 3</p></div>
+                <div class="jogo-terminado-item" title="Bloodborne"><img src="/img/jogo2-terminado.jpg" alt="Bloodborne" /><p>Bloodborne</p></div>
+                <div class="jogo-terminado-item" title="Detroit Become Human"><img src="/img/jogo3-terminado.jpg" alt="Detroit Become Human" /><p>Detroit Become Human</p></div>
+                <div class="jogo-terminado-item" title="Hollow Knight"><img src="/img/jogo4-terminado.jpg" alt="Hollow Knight" /><p>Hollow Knight</p></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="livros" class="tab-content">
+            <h2>Minhas Recomendações</h2>
+            <div class="books-grid">
+                <div class="book-card"><img src="/img/Livro1.jpg" alt="Romeu e Julieta" /><h3>Romeu e Julieta</h3></div>
+                <div class="book-card"><img src="/img/Livro2.jpg" alt="Hamlet" /><h3>Hamlet</h3></div>
+                <div class="book-card"><img src="/img/livro3.jpg" alt="Otelo" /><h3>Otelo</h3></div>
+                <div class="book-card"><img src="/img/livro6.jpg" alt="Sherlock Holmes : Um Estudo em vermelho" /><h3>Sherlock Holmes : Um Estudo em vermelho</h3></div>
+                <div class="book-card"><img src="https://m.media-amazon.com/images/I/619kzsBXy8L._UF1000,1000_QL80_.jpg" alt="Sherlock Holmes: O Cão Dos Baskervilles" /><h3>Sherlock Holmes: O Cão Dos Baskervilles</h3></div>
+                <div class="book-card"><img src="https://m.media-amazon.com/images/I/61be7vluTaL._UF1000,1000_QL80_.jpg" alt="Sherlock Holmes: O Signo Dos Quatros" /><h3>Sherlock Holmes: O Signo Dos Quatros</h3></div>
+                <div class="book-card"><img src="https://m.media-amazon.com/images/I/71VQR8rTBXL._AC_UF1000,1000_QL80_DpWeblab_.jpg" alt="Santo Agostinho: Confissões" /><h3>Santo Agostinho: Confissões</h3></div>
+                <div class="book-card"><img src="https://m.media-amazon.com/images/I/71FvmGwhFXL.jpg" alt="Santo Agostinho: Cidade De Deus" /><h3>Santo Agostinho: Cidade De Deus</h3></div>
+                <div class="book-card"><img src="https://checkout.loyola.com.br/resizer/view/false/false/true/false/5679.jpg" alt="Tomás De Kempis: Imitação de Cristo" /><h3>Tomás De Kempis: Imitação de Cristo</h3></div>
+                <div class="book-card"><img src="https://m.media-amazon.com/images/I/61r-3VfJbRL._AC_UF1000,1000_QL80_.jpg" alt="Friedrich Nietzsche: O Anticristo" /><h3>Friedrich Nietzsche: O Anticristo</h3></div>
+                <div class="book-card"><img src="https://m.media-amazon.com/images/I/81gfDnn7qgL._AC_UF1000,1000_QL80_.jpg" alt="Sigmund Freud: A interpretação Dos Sonhos" /><h3>Sigmund Freud: A interpretação Dos Sonhos</h3></div>
+                <div class="book-card"><img src="https://m.media-amazon.com/images/I/81TNzkUcNzL.jpg" alt="Séneca: Sobre A Brevidade Da Vida" /><h3>Séneca: Sobre A Brevidade Da Vida</h3></div>
+                <div class="book-card"><img src="https://m.media-amazon.com/images/I/21zoOEArgTL._AC_UF1000,1000_QL80_.jpg" alt="Jean Paul Sartre: O Ser e o Nada" /><h3>Jean Paul Sartre: O Ser e o Nada</h3></div>
+                <div class="book-card"><img src="https://m.media-amazon.com/images/I/41Bqlqzr-IL._SY466_.jpg" alt="Plotino : As Enéadas" /><h3>Plotino : As Enéadas</h3></div>
+                <div class="book-card"><img src="https://m.media-amazon.com/images/I/51bNY09w--L.jpg" alt="Lao Tsé: Tao Te Ching" /><h3>Lao Tsé: Tao Te Ching</h3></div>
+                <div class="book-card"><img src="https://m.media-amazon.com/images/I/61XFqlHX+rL._AC_UF1000,1000_QL80_.jpg" alt="Dogen:Shōbōgenzō" /><h3>Dogen:Shōbōgenzō</h3></div>
+                <div class="book-card"><img src="https://m.media-amazon.com/images/I/61FHvMia1bL._AC_UF1000,1000_QL80_.jpg" alt="Heráclito : Fragmentos Contextualizados" /><h3>Heráclito : Fragmentos Contextualizados</h3></div>
+                <div class="book-card"><img src="https://m.media-amazon.com/images/I/612B0id4gNL._AC_UF1000,1000_QL80_.jpg" alt="Marco Aurelio : Meditações" /><h3>Marco Aurelio : Meditações</h3></div>
+            </div>
         </section>
     
         <section id="estudos" class="tab-content">
@@ -221,6 +207,16 @@
                     <a href="https://www.notion.so/Explora-o-da-Simbologia-do-Verbo-Logos-e-sua-Liga-o-entre-o-Texto-B-blico-e-a-Filosofia-Helen--1fe88ee6c5da8036a826d362915af43a?pvs=4" class="study-button" target="_blank">Ver estudo</a>
                   </div>
                 </div>
+
+                   <div class="study-card">
+                  <img src="/img/capar.png" alt="Comentário em João 1">
+                  <div class="study-info">
+                    <h3>Como as pessoas amam errado</h3>
+                    <p>Uma reflexão sobre as distorções do amor na sociedade contemporânea.</p>
+                    <a href="https://www.notion.so/Como-as-Pessoas-Amam-Errado-20f36ac83edf80c986e5db5633321a00?source=copy_link" class="study-button" target="_blank">Ver estudo</a>
+                  </div>
+                </div>
+            </div>
             </div>
         </section>
     

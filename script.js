@@ -18,25 +18,6 @@ window.addEventListener('load', () => {
     });
   });
 
-  // Lógica para a sub-navegação dentro da aba "Apresentação"
-  const subNavLinks = document.querySelectorAll('.subnav-link');
-  const subTabPanes = document.querySelectorAll('.subtab-pane');
-
-  subNavLinks.forEach(link => {
-    link.addEventListener('click', e => {
-      e.preventDefault();
-      const targetId = link.getAttribute('data-subtab');
-
-      // Remove a classe 'active' de todos os links e painéis da sub-navegação
-      subNavLinks.forEach(l => l.classList.remove('active'));
-      subTabPanes.forEach(p => p.classList.remove('active'));
-
-      // Adiciona a classe 'active' ao link clicado e ao painel correspondente
-      link.classList.add('active');
-      document.getElementById(targetId).classList.add('active');
-    });
-  });
-
   // Lógica para os links dos Destaques
   const highlightLinks = document.querySelectorAll('.highlight-card');
 
@@ -45,23 +26,11 @@ window.addEventListener('load', () => {
       e.preventDefault();
 
       const mainTabId = link.getAttribute('data-main-tab');
-      const subTabId = link.getAttribute('data-sub-tab');
 
       // Ativa a aba principal correta
       const mainTabLink = document.querySelector(`.tab-link[data-tab="${mainTabId}"]`);
       if (mainTabLink) {
         mainTabLink.click();
-      }
-
-      // Se houver uma sub-aba, ativa ela também
-      if (subTabId) {
-        // Usamos um pequeno timeout para garantir que o painel principal já esteja visível
-        setTimeout(() => {
-          const subTabLink = document.querySelector(`.subnav-link[data-subtab="${subTabId}"]`);
-          if (subTabLink) {
-            subTabLink.click();
-          }
-        }, 50);
       }
     });
   });
@@ -107,23 +76,23 @@ window.addEventListener('load', () => {
     });
   }
 
-  // NEW: Lógica para a aba "Códigos"
+  // Lógica para a aba "Códigos"
   const secretCodeInput = document.getElementById('secret-code-input');
   const submitCodeButton = document.getElementById('submit-code-button');
   const codeMessage = document.getElementById('code-message');
-  const secretPages = document.querySelectorAll('.secret-page-content'); // Get all secret pages
+  const secretPages = document.querySelectorAll('.secret-page-content');
 
   // Define your secret codes and their corresponding page IDs
   const secretCodes = {
     'batman': 'secret-page-batman',
     'pinguim': 'secret-page-penguin',
     'shakespeare': 'secret-page-shakespeare',
-    '20251997': 'secret-page-games' // NEW: Add 'jogos' code
+    '20251997': 'secret-page-games'
   };
 
   if (submitCodeButton) {
     submitCodeButton.addEventListener('click', () => {
-      const enteredCode = secretCodeInput.value.toLowerCase().trim(); // Get and clean input
+      const enteredCode = secretCodeInput.value.toLowerCase().trim();
 
       // Hide all secret pages first
       secretPages.forEach(page => {

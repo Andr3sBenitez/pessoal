@@ -165,6 +165,7 @@ main {
 .main-content-column {
     max-width: 900px;
     width: 100%;
+    margin: 0 auto;
 }
 
 .tab-content {
@@ -191,50 +192,7 @@ h2 {
 /* ===== ESTRUTURA DA ABA APRESENTAÇÃO ===== */
 .presentation-wrapper {
   display: flex;
-  gap: 30px;
   align-items: flex-start;
-}
-
-.presentation-sidebar.icon-only {
-  width: 60px;
-  flex-shrink: 0;
-  border-right: 1px solid #eee;
-  padding-right: 15px;
-}
-
-.presentation-sidebar.icon-only ul {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-}
-
-.presentation-sidebar.icon-only a.subnav-link {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 44px;
-  height: 44px;
-  padding: 0;
-  text-decoration: none;
-  color: #555;
-  border-radius: 8px;
-  transition: all 0.2s ease;
-}
-
-.presentation-sidebar.icon-only a.subnav-link i {
-    font-size: 1.5rem;
-}
-
-.presentation-sidebar.icon-only a.subnav-link:hover {
-  background-color: #f5f5f5;
-  color: #111;
-}
-
-.presentation-sidebar.icon-only a.subnav-link.active {
-  background-color: #111;
-  color: #fff;
 }
 
 .presentation-content-area {
