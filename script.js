@@ -17,23 +17,6 @@ window.addEventListener('load', () => {
       document.getElementById(target).classList.add('active');
     });
   });
-
-  // Lógica para os links dos Destaques
-  const highlightLinks = document.querySelectorAll('.highlight-card');
-
-  highlightLinks.forEach(link => {
-    link.addEventListener('click', e => {
-      e.preventDefault();
-
-      const mainTabId = link.getAttribute('data-main-tab');
-
-      // Ativa a aba principal correta
-      const mainTabLink = document.querySelector(`.tab-link[data-tab="${mainTabId}"]`);
-      if (mainTabLink) {
-        mainTabLink.click();
-      }
-    });
-  });
   
   // Lógica para a aba "Criação"
   const creationButton = document.getElementById('creation-button');
