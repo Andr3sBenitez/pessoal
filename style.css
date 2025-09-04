@@ -11,8 +11,8 @@
 html, body {
   height: 100%;
   font-family: 'Inter', sans-serif;
-  background-color: #ffffff;
-  color: #111111;
+  background-color: #121212; /* Fundo preto */
+  color: #e0e0e0; /* Texto claro */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -20,15 +20,15 @@ html, body {
 /* ===== Estilização da Scrollbar ===== */
 ::-webkit-scrollbar {
   width: 12px;
-  background-color: #f5f5f5;
+  background-color: #121212;
 }
 ::-webkit-scrollbar-thumb {
   background-color: #333;
   border-radius: 10px;
-  border: 3px solid #f5f5f5;
+  border: 3px solid #121212;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background-color: #000;
+  background-color: #555;
 }
 
 /* ===== LAYOUT PRINCIPAL ===== */
@@ -39,8 +39,9 @@ body {
 /* ===== SIDEBAR DE NAVEGAÇÃO PRINCIPAL ===== */
 .sidebar {
   width: 220px;
-  background-color: #ffffff;
-  border-right: 1px solid #e5e5e5;
+  background-color: rgba(25, 25, 25, 0.5); /* Efeito de vidro */
+  backdrop-filter: blur(10px);
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
   display: flex;
   flex-direction: column;
   position: fixed;
@@ -51,14 +52,14 @@ body {
 
 .logo {
   text-decoration: none;
-  color: #000;
+  color: #ffffff;
   font-size: 1.5rem;
   font-weight: 700;
   padding: 20px 15px 10px 15px;
 }
 
 .sidebar nav {
-  flex-grow: 1; 
+  flex-grow: 1;
   padding: 10px;
 }
 
@@ -74,7 +75,7 @@ body {
   align-items: center;
   gap: 15px;
   text-decoration: none;
-  color: #333333;
+  color: #cccccc;
   font-weight: 500;
   font-size: 1rem;
   padding: 10px 15px;
@@ -87,12 +88,12 @@ body {
 }
 
 .sidebar ul.tabs li a:hover {
-  background-color: #f5f5f5;
-  color: #000;
+  background-color: rgba(255, 255, 255, 0.05);
+  color: #ffffff;
 }
 
 .sidebar ul.tabs li a.active {
-  background-color: #000000;
+  background-color: rgba(255, 255, 255, 0.1);
   color: #ffffff;
 }
 
@@ -126,8 +127,9 @@ main {
 h2 {
   font-size: 1.8rem;
   margin-bottom: 30px;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   padding-bottom: 15px;
+  color: #ffffff;
 }
 
 /* ===== ESTRUTURA DA ABA APRESENTAÇÃO ===== */
@@ -149,11 +151,12 @@ h2 {
 .presentation-text h1 {
   font-size: 2.2rem;
   margin-bottom: 15px;
+  color: #ffffff;
 }
 
 .presentation-text p {
   font-size: 1rem;
-  color: #555;
+  color: #cccccc;
   line-height: 1.6;
   margin-bottom: 10px;
 }
@@ -166,8 +169,8 @@ h2 {
 }
 
 .badge {
-  background-color: #eee;
-  color: #333;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #e0e0e0;
   font-size: 0.9rem;
   padding: 6px 12px;
   border-radius: 20px;
@@ -176,13 +179,14 @@ h2 {
 /* SEÇÃO DE MÚSICAS */
 .music-section, .links-section {
     padding-top: 30px;
-    border-top: 1px solid #eee;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .music-section h4, .links-section h4 {
     font-size: 1.3rem;
     font-weight: 600;
     margin-bottom: 20px;
+    color: #ffffff;
 }
 
 .music-grid {
@@ -192,7 +196,9 @@ h2 {
 }
 
 .music-card {
-    background-color: #f9f9f9;
+    background-color: rgba(35, 35, 35, 0.5);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 12px;
     padding: 15px;
     text-align: center;
@@ -201,7 +207,7 @@ h2 {
 
 .music-card:hover {
     transform: translateY(-4px);
-    box-shadow: 0 4px 15px rgba(0,0,0,0.07);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
 }
 
 .album-cover {
@@ -219,149 +225,77 @@ h2 {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    color: #ffffff;
 }
 
 .music-info span {
     font-size: 0.9rem;
-    color: #666;
-}
-
-/* SEÇÃO DE LINKS ÚTEIS */
-.links-section {
-    margin-top: 40px;
-}
-
-.links-list {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.link-card {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    background-color: #f9f9f9;
-    padding: 20px;
-    border-radius: 12px;
-    text-decoration: none;
-    color: #111;
-    border: 1px solid #eee;
-    transition: border-color 0.2s ease, background-color 0.2s ease;
-}
-
-.link-card:hover {
-    background-color: #f5f5f5;
-    border-color: #ddd;
-}
-
-.link-icon-wrapper {
-    background-color: #eee;
-    width: 48px;
-    height: 48px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-}
-
-.link-icon-wrapper i {
-    font-size: 1.5rem;
-    color: #333;
-}
-
-.link-content {
-    flex-grow: 1;
-}
-
-.link-content strong {
-    font-size: 1.1rem;
-    font-weight: 600;
-    display: block;
-    margin-bottom: 4px;
-}
-
-.link-content p {
-    font-size: 0.95rem;
-    color: #555;
-    line-height: 1.5;
-    margin: 0;
-}
-
-.link-arrow {
-    font-size: 1.5rem;
-    color: #888;
-    transition: transform 0.2s ease;
-}
-
-.link-card:hover .link-arrow {
-    transform: translateX(3px) translateY(-3px);
+    color: #cccccc;
 }
 
 /* SEÇÕES DE CONTEÚDO (FILMES, JOGOS, ETC.) */
 .movies-container{display: flex; flex-direction: column; gap: 40px;}
-.movie-card{display: grid; grid-template-columns: 160px 1fr; gap: 25px; align-items: flex-start;}
+.movie-card{display: grid; grid-template-columns: 160px 1fr; gap: 25px; align-items: flex-start; background-color: rgba(35, 35, 35, 0.5); padding: 20px; border-radius: 12px; border: 1px solid rgba(255, 255, 255, 0.1);}
 .movie-card img{width: 100%; border-radius: 8px; object-fit: cover; transition: transform .3s ease;}
 .movie-card img:hover{transform: scale(1.05);}
-.movie-info h3{font-size: 1.5rem; margin: 0 0 10px;}
-.movie-info p{font-size: 1rem; color: #555; line-height: 1.7; margin-bottom: 1rem;}
+.movie-info h3{font-size: 1.5rem; margin: 0 0 10px; color: #ffffff;}
+.movie-info p{font-size: 1rem; color: #cccccc; line-height: 1.7; margin-bottom: 1rem;}
 
 .twitch-container{display: flex; justify-content: center; margin-bottom: 40px;}
-.twitch-link{display: inline-flex; align-items: center; gap: 12px; background: #f0f0f0; color: #111; text-decoration: none; padding: 12px 20px; border-radius: 8px; font-weight: 500; border: 1px solid #ddd; transition: background .2s ease;}
-.twitch-link:hover{background: #e9e9e9;}
+.twitch-link{display: inline-flex; align-items: center; gap: 12px; background: rgba(255, 255, 255, 0.1); color: #ffffff; text-decoration: none; padding: 12px 20px; border-radius: 8px; font-weight: 500; border: 1px solid rgba(255, 255, 255, 0.2); transition: background .2s ease;}
+.twitch-link:hover{background: rgba(255, 255, 255, 0.2);}
 .twitch-logo{width: 24px; height: 24px;}
-.jogos-terminados h3{font-size: 1.3rem; text-align: center; margin-bottom: 20px; font-weight: 600;}
+.jogos-terminados h3{font-size: 1.3rem; text-align: center; margin-bottom: 20px; font-weight: 600; color: #ffffff;}
 .grid-terminados{display: grid; grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: 20px; justify-items: center;}
 .jogo-terminado-item{text-align: center;}
 .jogo-terminado-item img{width: 100%; max-width: 130px; aspect-ratio: 1/1; object-fit: cover; border-radius: 12px; margin-bottom: 10px;}
-.jogo-terminado-item p{font-weight: 500;}
+.jogo-terminado-item p{font-weight: 500; color: #e0e0e0;}
 
 .books-grid{display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 30px; justify-items: center;}
 .book-card{text-align: center;}
 .book-card img{width: 150px; height: 220px; object-fit: cover; border-radius: 8px; transition: transform .2s ease;}
-.book-card h3{font-size: 1rem; font-weight: 500; margin-top: 10px; color: #333;}
+.book-card h3{font-size: 1rem; font-weight: 500; margin-top: 10px; color: #cccccc;}
 
 .estudos-container{display: flex; flex-direction: column; gap: 25px;}
-.estudos-intro{text-align: center; color: #666; margin-top: -15px; padding-bottom: 15px;}
-.study-card{display: flex; gap: 20px; background-color: #fcfcfc; border: 1px solid #eee; padding: 20px; border-radius: 12px; align-items: center;}
+.estudos-intro{text-align: center; color: #cccccc; margin-top: -15px; padding-bottom: 15px;}
+.study-card{display: flex; gap: 20px; background-color: rgba(35, 35, 35, 0.5); border: 1px solid rgba(255, 255, 255, 0.1); padding: 20px; border-radius: 12px; align-items: center;}
 .study-card img{width: 120px; height: 120px; object-fit: cover; border-radius: 8px; flex-shrink: 0;}
-.study-info h3{font-size: 1.3rem; margin-bottom: 8px;}
-.study-info p{color: #555; line-height: 1.5; margin-bottom: 15px;}
-.study-button{display: inline-block; background-color: #000; color: #fff; text-decoration: none; padding: 8px 16px; border-radius: 6px; font-size: .9rem; font-weight: 500; transition: background-color .2s ease;}
-.study-button:hover{background-color: #333;}
+.study-info h3{font-size: 1.3rem; margin-bottom: 8px; color: #ffffff;}
+.study-info p{color: #cccccc; line-height: 1.5; margin-bottom: 15px;}
+.study-button{display: inline-block; background-color: #ffffff; color: #121212; text-decoration: none; padding: 8px 16px; border-radius: 6px; font-size: .9rem; font-weight: 500; transition: background-color .2s ease;}
+.study-button:hover{background-color: #e0e0e0;}
 
-.creation-container{text-align: center; max-width: 600px; margin: 0 auto; padding: 30px; background-color: #f9f9f9; border: 1px solid #eee; border-radius: 12px;}
+.creation-container{text-align: center; max-width: 600px; margin: 0 auto; padding: 30px; background-color: rgba(35, 35, 35, 0.5); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 12px;}
 .creation-container h2{border: none; text-align: center;}
-.creation-container p{color: #555; line-height: 1.6; margin-bottom: 25px;}
-#creation-button{background-color: #000; color: #fff; border: none; padding: 12px 28px; font-size: 1rem; font-weight: 500; border-radius: 8px; cursor: pointer; transition: all .2s ease;}
-#creation-button:hover{background-color: #333;}
-#creation-button:disabled{background-color: #ccc; cursor: not-allowed;}
-#creation-status{margin-top: 20px; font-size: 1rem; color: #777; min-height: 24px;}
+.creation-container p{color: #cccccc; line-height: 1.6; margin-bottom: 25px;}
+#creation-button{background-color: #ffffff; color: #121212; border: none; padding: 12px 28px; font-size: 1rem; font-weight: 500; border-radius: 8px; cursor: pointer; transition: all .2s ease;}
+#creation-button:hover{background-color: #e0e0e0;}
+#creation-button:disabled{background-color: #555; cursor: not-allowed;}
+#creation-status{margin-top: 20px; font-size: 1rem; color: #aaaaaa; min-height: 24px;}
 #creation-result-wrapper{min-height: 30px; font-size: 1.1rem; font-weight: 600;}
 .success-message{color: #28a745;}
 .failure-message{color: #dc3545;}
 
-.typing-effect{width: 0; overflow: hidden; white-space: nowrap; border-right: .15em solid #111; animation: typing 2.5s steps(40, end) forwards, blink-caret .75s step-end infinite;}
+.typing-effect{width: 0; overflow: hidden; white-space: nowrap; border-right: .15em solid #e0e0e0; animation: typing 2.5s steps(40, end) forwards, blink-caret .75s step-end infinite;}
 @keyframes typing{from{width: 0}to{width: 100%}}
-@keyframes blink-caret{from,to{border-color: transparent}50%{border-color: #111}}
+@keyframes blink-caret{from,to{border-color: transparent}50%{border-color: #e0e0e0}}
 .reveal-effect{animation: reveal 1s ease-out forwards}
 @keyframes reveal{from{opacity: 0;transform: scale(.8)}to{opacity: 1;transform: scale(1)}}
 
 /* Estilos da Aba Códigos */
-.codes-container {text-align: center; max-width: 600px; margin: 0 auto; padding: 30px; background-color: #f9f9f9; border: 1px solid #eee; border-radius: 12px;}
+.codes-container {text-align: center; max-width: 600px; margin: 0 auto; padding: 30px; background-color: rgba(35, 35, 35, 0.5); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 12px;}
 .codes-container h2 {border: none; text-align: center; margin-bottom: 20px;}
-.codes-container p {color: #555; line-height: 1.6; margin-bottom: 25px;}
+.codes-container p {color: #cccccc; line-height: 1.6; margin-bottom: 25px;}
 .code-input-area {display: flex; gap: 10px; justify-content: center; margin-bottom: 20px;}
-#secret-code-input {padding: 10px 15px; border: 1px solid #ddd; border-radius: 8px; font-size: 1rem; flex-grow: 1; max-width: 300px;}
-#submit-code-button {background-color: #000; color: #fff; border: none; padding: 10px 20px; font-size: 1rem; font-weight: 500; border-radius: 8px; cursor: pointer; transition: background-color .2s ease;}
-#submit-code-button:hover {background-color: #333;}
+#secret-code-input {padding: 10px 15px; border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 8px; font-size: 1rem; flex-grow: 1; max-width: 300px; background-color: #222; color: #e0e0e0;}
+#submit-code-button {background-color: #ffffff; color: #121212; border: none; padding: 10px 20px; font-size: 1rem; font-weight: 500; border-radius: 8px; cursor: pointer; transition: background-color .2s ease;}
+#submit-code-button:hover {background-color: #e0e0e0;}
 .code-message {margin-top: 15px; font-weight: 600; min-height: 20px;}
 .code-message.success-message {color: #28a745;}
 .code-message.failure-message {color: #dc3545;}
-.secret-page-content {margin-top: 30px; padding: 20px; background-color: #fff; border: 1px solid #eee; border-radius: 12px; text-align: center;}
-.secret-page-content h3 {font-size: 1.5rem; margin-bottom: 15px; color: #000;}
-.secret-page-content p {font-size: 1rem; line-height: 1.6; color: #555; margin-bottom: 15px;}
+.secret-page-content {margin-top: 30px; padding: 20px; background-color: rgba(25, 25, 25, 0.7); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 12px; text-align: center;}
+.secret-page-content h3 {font-size: 1.5rem; margin-bottom: 15px; color: #ffffff;}
+.secret-page-content p {font-size: 1rem; line-height: 1.6; color: #cccccc; margin-bottom: 15px;}
 .secret-page-content img {display: block; margin: 0 auto 20px auto; max-height: 200px; width: auto; }
 .download-button {display: block; background-color: #007bff; color: #fff; text-decoration: none; padding: 10px 20px; border-radius: 8px; font-weight: 500; transition: background-color 0.2s ease; margin: 10px auto 0 auto; width: fit-content; }
 .download-button:hover {background-color: #0056b3;}
@@ -372,7 +306,7 @@ h2 {
   body {flex-direction: column;}
   .sidebar {width: 100%; height: auto; position: static; flex-direction: column;}
   .sidebar nav {flex-grow: 0; width: 100%; order: 1;}
-  .sidebar ul.tabs {flex-direction: row; justify-content: space-around; gap: 0; border-bottom: 1px solid #e5e5e5;}
+  .sidebar ul.tabs {flex-direction: row; justify-content: space-around; gap: 0; border-bottom: 1px solid rgba(255, 255, 255, 0.1);}
   .sidebar ul.tabs li a {padding: 12px 8px; justify-content: center;}
   .sidebar ul.tabs li a span {display: none;}
   .logo {display: none;}
@@ -388,11 +322,6 @@ h2 {
   .music-info strong {font-size: 0.9rem;}
   .music-info span {font-size: 0.8rem;}
   
-  .link-card {padding: 15px; gap: 15px; flex-direction: column; text-align: center;}
-  .link-card .link-arrow {display: none;}
-  .link-content strong {font-size: 1rem;}
-  .link-content p {font-size: 0.9rem;}
-
   .movie-card {grid-template-columns: 1fr; gap: 15px; text-align: left;}
   .movie-card img {width: 100%; max-width: 200px; margin: 0 auto;}
   .movie-info h3 {font-size: 1.3rem; text-align: center;}
@@ -411,7 +340,7 @@ h2 {
 /* ===== WIDGET "NO MOMENTO" DENTRO DA SIDEBAR ===== */
 .sidebar-widget-wrapper {
     padding: 10px;
-    border-top: 1px solid #e5e5e5;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .sidebar-widget h3 {
@@ -419,6 +348,7 @@ h2 {
     font-weight: 600;
     margin-bottom: 15px;
     padding: 0 5px;
+    color: #ffffff;
 }
 
 .widget-card {
@@ -434,7 +364,7 @@ h2 {
 }
 
 .widget-card:hover {
-    background-color: #f5f5f5;
+    background-color: rgba(255, 255, 255, 0.05);
 }
 
 .widget-thumbnail {
@@ -454,7 +384,7 @@ h2 {
 .widget-content h4 {
     font-size: 0.75rem;
     font-weight: 600;
-    color: #777;
+    color: #aaaaaa;
     text-transform: uppercase;
     letter-spacing: 0.5px;
     margin-bottom: 3px;
@@ -463,9 +393,8 @@ h2 {
 .widget-content p {
     font-size: 0.9rem;
     font-weight: 500;
-    color: #111;
+    color: #e0e0e0;
     white-space: normal; /* Permite a quebra de linha */
     line-height: 1.3;    /* Melhora o espaçamento entre as linhas */
     margin: 0;
-    /* As propriedades de overflow e text-overflow foram removidas */
 }
